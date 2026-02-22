@@ -47,22 +47,32 @@ void MechanicalDisplay::homeAllMotors() {
     } while (!allHomed);
 }
 
+// This method is called from the main core when we have new time data to display.
 void MechanicalDisplay::updateTime(const TimeData& timeData) {
     // Only update if time is valid
     if (timeData.validTime) {
-        // the motors are running in the other core, so we need to pause it before making updates
-        rp2040.idleOtherCore();
-        hoursTens_.moveToDigit(timeData.localHours / 10);
-        hoursOnes_.moveToDigit(timeData.localHours % 10);
-        minutesTens_.moveToDigit(timeData.localMinutes / 10);
-        minutesOnes_.moveToDigit(timeData.localMinutes % 10);
-        secondsTens_.moveToDigit(timeData.localSeconds / 10);
-        secondsOnes_.moveToDigit(timeData.localSeconds % 10);
-        rp2040.resumeOtherCore();
+        // shove the digits into the FIFO for the other core
+        rp2040.fifo.push(
+            timeData.localHours * 10000 +
+            timeData.localMinutes * 100 +
+            timeData.localSeconds);
     }
 }
 
+// This method is called from the second core's main loop to service the motors.
 void MechanicalDisplay::runMotors() {
+    // if we have time data from the other core
+    if(rp2040.fifo.available()) {
+        // Decode and update the motors
+        uint32_t timeDataInt = rp2040.fifo.pop();
+        hoursTens_.moveToDigit(timeDataInt   / 100000 % 10);
+        hoursOnes_.moveToDigit(timeDataInt   / 10000 % 10);
+        minutesTens_.moveToDigit(timeDataInt / 1000 % 10);
+        minutesOnes_.moveToDigit(timeDataInt / 100 % 10);
+        secondsTens_.moveToDigit(timeDataInt / 10 % 10);
+        secondsOnes_.moveToDigit(timeDataInt % 10);
+    }
+
     digitalWrite(debugPin_, HIGH);  // Start timing measurement
     
     hoursTens_.run();
