@@ -25,19 +25,19 @@
 
 // Stepper Motor Pin Assignments
 #define HOURS_TENS_STEP_PIN     2
-#define HOURS_TENS_DIR_PIN      15
+#define HOURS_TENS_DIR_PIN      14
 #define HOURS_TENS_HOME_PIN     3
 #define HOURS_ONES_STEP_PIN     4
 #define HOURS_ONES_DIR_PIN      15
 #define HOURS_ONES_HOME_PIN     5
 #define MINUTES_TENS_STEP_PIN   6
-#define MINUTES_TENS_DIR_PIN    15
+#define MINUTES_TENS_DIR_PIN    14
 #define MINUTES_TENS_HOME_PIN   7
 #define MINUTES_ONES_STEP_PIN   8
 #define MINUTES_ONES_DIR_PIN    15
 #define MINUTES_ONES_HOME_PIN   9
 #define SECONDS_TENS_STEP_PIN   10
-#define SECONDS_TENS_DIR_PIN    15
+#define SECONDS_TENS_DIR_PIN    14
 #define SECONDS_TENS_HOME_PIN   11
 #define SECONDS_ONES_STEP_PIN   12
 #define SECONDS_ONES_DIR_PIN    15
@@ -49,6 +49,7 @@
 #define LED_PIN                 LED_BUILTIN  // Use Pico built-in LED
 #define DEBUG_PIN               28      // Debug timing pin for runMotors() measurement
 #define TIMEZONE_BUTTON_PIN     26      // Timezone offset button
+#define H24_BUTTON_PIN          27      // 24H/12H format toggle button
 
 // Button Debounce Configuration
 #define BUTTON_DEBOUNCE_MS      50     // Debounce time in milliseconds
@@ -64,7 +65,6 @@
 #define MOTOR_HOMING_SPEED      5000     // Steps per second during homing
 #define MOTOR_MAX_SPEED         5000    // Steps per second
 #define MOTOR_ACCELERATION      50000   // Steps per second²
-#define MOTOR_INVERT_DIRECTION  true    // Set to true to invert stepper direction, false for normal
 
 // Per-motor homing offset (number of steps to continue moving after the home switch is triggered)
 #define HOMING_OFFSET_STEPS_HOURS_TENS      110

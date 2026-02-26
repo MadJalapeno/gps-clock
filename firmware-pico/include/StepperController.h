@@ -6,7 +6,7 @@
 
 class StepperController {
 public:
-    StepperController(AccelStepper& stepperMotor, int stepsPerPos, int homingPin, int homingOffsetSteps);
+       StepperController(AccelStepper& stepperMotor, int stepsPerPos, int homingPin, int homingOffsetSteps, bool invertDirection);
     void initialize();
     void moveToDigit(int targetDigit);
     void run();
@@ -25,6 +25,7 @@ private:
     int stepsPerPosition_;
     int homingPin_;
     int homingOffsetSteps_;
+    bool invertDirection_;
     HomingState homingState_ = UNHOMED;
     void resetStepCountIfStationary();
 };

@@ -5,11 +5,11 @@
 #define MAX_DIGIT              9
 #define DIGITS_PER_WHEEL       10
 
-StepperController::StepperController(AccelStepper& stepperMotor, int stepsPerPos, int homingPin, int homingOffsetSteps)
-    : motor_(stepperMotor), targetDigit_(0), stepsPerPosition_(stepsPerPos), homingPin_(homingPin), homingOffsetSteps_(homingOffsetSteps) {
+StepperController::StepperController(AccelStepper& stepperMotor, int stepsPerPos, int homingPin, int homingOffsetSteps, bool invertDirection)
+    : motor_(stepperMotor), targetDigit_(0), stepsPerPosition_(stepsPerPos), homingPin_(homingPin), homingOffsetSteps_(homingOffsetSteps), invertDirection_(invertDirection) {
     motor_.setMaxSpeed(MOTOR_MAX_SPEED);
     motor_.setAcceleration(MOTOR_ACCELERATION);
-    motor_.setPinsInverted(MOTOR_INVERT_DIRECTION);
+    motor_.setPinsInverted(invertDirection_);
 }
 
 void StepperController::initialize() {

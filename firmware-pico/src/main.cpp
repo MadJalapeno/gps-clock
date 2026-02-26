@@ -25,12 +25,12 @@ AccelStepper secondsTens(AccelStepper::DRIVER, SECONDS_TENS_STEP_PIN, SECONDS_TE
 AccelStepper secondsOnes(AccelStepper::DRIVER, SECONDS_ONES_STEP_PIN, SECONDS_ONES_DIR_PIN);
 
 // Motor digit controllers
-StepperController motorHoursTens(hoursTens, STEPS_PER_POSITION, HOURS_TENS_HOME_PIN, HOMING_OFFSET_STEPS_HOURS_TENS);
-StepperController motorHoursOnes(hoursOnes, STEPS_PER_POSITION, HOURS_ONES_HOME_PIN, HOMING_OFFSET_STEPS_HOURS_ONES);
-StepperController motorMinutesTens(minutesTens, STEPS_PER_POSITION, MINUTES_TENS_HOME_PIN, HOMING_OFFSET_STEPS_MINUTES_TENS);
-StepperController motorMinutesOnes(minutesOnes, STEPS_PER_POSITION, MINUTES_ONES_HOME_PIN, HOMING_OFFSET_STEPS_MINUTES_ONES);
-StepperController motorSecondsTens(secondsTens, STEPS_PER_POSITION, SECONDS_TENS_HOME_PIN, HOMING_OFFSET_STEPS_SECONDS_TENS);
-StepperController motorSecondsOnes(secondsOnes, STEPS_PER_POSITION, SECONDS_ONES_HOME_PIN, HOMING_OFFSET_STEPS_SECONDS_ONES);
+StepperController motorHoursTens(hoursTens, STEPS_PER_POSITION, HOURS_TENS_HOME_PIN, HOMING_OFFSET_STEPS_HOURS_TENS, true);
+StepperController motorHoursOnes(hoursOnes, STEPS_PER_POSITION, HOURS_ONES_HOME_PIN, HOMING_OFFSET_STEPS_HOURS_ONES, false);
+StepperController motorMinutesTens(minutesTens, STEPS_PER_POSITION, MINUTES_TENS_HOME_PIN, HOMING_OFFSET_STEPS_MINUTES_TENS, true);
+StepperController motorMinutesOnes(minutesOnes, STEPS_PER_POSITION, MINUTES_ONES_HOME_PIN, HOMING_OFFSET_STEPS_MINUTES_ONES, false);
+StepperController motorSecondsTens(secondsTens, STEPS_PER_POSITION, SECONDS_TENS_HOME_PIN, HOMING_OFFSET_STEPS_SECONDS_TENS, true);
+StepperController motorSecondsOnes(secondsOnes, STEPS_PER_POSITION, SECONDS_ONES_HOME_PIN, HOMING_OFFSET_STEPS_SECONDS_ONES, false);
 
 // LED controller
 LEDController ledController(LED_PIN);
