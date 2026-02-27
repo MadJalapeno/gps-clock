@@ -11,10 +11,8 @@ void DebouncedButton::initialize() {
 }
 
 DebouncedButton::PressType DebouncedButton::checkButton() {
-    // keep track of state between calls
-    static bool lastState = HIGH;
-    static unsigned long lastChangeTime = millis();
-    static PressType pendingPress = PressType::None;
+    // keep track of state between calls (now per instance)
+    if (lastChangeTime_ == 0) lastChangeTime_ = millis();
 
     // read the current state and time
     bool currentState = digitalRead(pin_);
@@ -24,36 +22,38 @@ DebouncedButton::PressType DebouncedButton::checkButton() {
     PressType retVal = PressType::None;
 
     // debounce
-    if( currentState != lastState ) {
-        lastState = currentState;
-        lastChangeTime = currentTime;
+    if( currentState != lastState_ ) {
+        lastState_ = currentState;
+        lastChangeTime_ = currentTime;
     }
-    unsigned long stableTime = currentTime - lastChangeTime;
+    unsigned long stableTime = currentTime - lastChangeTime_;
 
     if( currentState == LOW ) {
 
         // if the button has been held down long enough, we have a candidate short press
-        if( pendingPress == PressType::None && stableTime > debounceMs_ ) {
-            pendingPress = PressType::Short;
+        if( pendingPress_ == PressType::None && stableTime > debounceMs_ ) {
+            pendingPress_ = PressType::Short;
         }
 
         // if the button has been held down even longer, we have a long press
-        if( pendingPress == PressType::Short && stableTime > longPressMs_ ) {
+        if( pendingPress_ == PressType::Short && stableTime > longPressMs_ ) {
             retVal = PressType::Long;
-            pendingPress = PressType::Long; // remember this so we don't return it again
+            pendingPress_ = PressType::Long; // remember this so we don't return it again
         }
 
     } else { // currentState == HIGH
 
         // release a pending short press on button release, if any
-        if( pendingPress == PressType::Short ) {
+        if( pendingPress_ == PressType::Short ) {
             retVal = PressType::Short;
         }
 
         // clear any pending press (short because we're about to return it, or long because we returned it earlier)
-        pendingPress = PressType::None;
+        pendingPress_ = PressType::None;
 
     }
+
+    return retVal;
 
     return retVal;
 }

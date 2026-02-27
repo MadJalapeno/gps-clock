@@ -21,7 +21,9 @@ private:
     uint8_t pin_;
     unsigned long debounceMs_;
     unsigned long longPressMs_;
-    
+    bool lastState_ = HIGH;
+    unsigned long lastChangeTime_ = 0;
+    PressType pendingPress_ = PressType::None;
 };
 
 #endif

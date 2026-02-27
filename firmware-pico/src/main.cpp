@@ -44,8 +44,9 @@ TFTDisplay tftDisplay(TFT_CS_PIN, TFT_DC_PIN, TFT_RST_PIN);
 // GPS processor
 GPSProcessor gpsProcessor(configPersistence, mechanicalDisplay, tftDisplay, ledController, Serial1);
 
-// Configuration button
-DebouncedButton configButton(TIMEZONE_BUTTON_PIN, BUTTON_DEBOUNCE_MS, BUTTON_LONG_PRESS_MS);
+// Configuration buttons
+DebouncedButton timeZoneButton(TIMEZONE_BUTTON_PIN, BUTTON_DEBOUNCE_MS, BUTTON_LONG_PRESS_MS);
+DebouncedButton h24Button(H24_BUTTON_PIN, BUTTON_DEBOUNCE_MS, BUTTON_LONG_PRESS_MS);
 
 void setup() {
     // initialize the hardware watchdog timer
@@ -66,7 +67,8 @@ void setup() {
 
     // Initialize everything
     configPersistence.initialize();
-    configButton.initialize();
+    timeZoneButton.initialize();
+    h24Button.initialize();
     ledController.initialize();
     tftDisplay.initialize();
 
@@ -87,12 +89,15 @@ void setup1() {
 
 // Main loop on core 0
 void loop() {
-    // Handle config button
-    DebouncedButton::PressType pressType = configButton.checkButton();
-    if (pressType == DebouncedButton::Short) {
+    // Handle configuration buttons
+    DebouncedButton::PressType tzPress = timeZoneButton.checkButton();
+    if (tzPress == DebouncedButton::Short) {
+        Serial.println("Timezone button short press detected, incrementing timezone offset");
         gpsProcessor.incrementTimezoneOffset();
     }
-    if (pressType == DebouncedButton::Long) {
+    DebouncedButton::PressType h24Press = h24Button.checkButton();
+    if (h24Press == DebouncedButton::Short) {
+        Serial.println("24H format button short press detected, toggling time format");
         gpsProcessor.toggleTimeFormat();
     }
 
