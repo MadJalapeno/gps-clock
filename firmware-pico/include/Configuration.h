@@ -23,26 +23,24 @@
 #define GPS_TX_PIN              0
 #define GPS_RX_PIN              1
 
-// Stepper Motor Pin Assignments
-#define HOURS_TENS_STEP_PIN     2
-#define HOURS_TENS_DIR_PIN      14
-#define HOURS_TENS_HOME_PIN     3
-#define HOURS_ONES_STEP_PIN     4
-#define HOURS_ONES_DIR_PIN      15
-#define HOURS_ONES_HOME_PIN     5
-#define MINUTES_TENS_STEP_PIN   6
-#define MINUTES_TENS_DIR_PIN    14
-#define MINUTES_TENS_HOME_PIN   7
-#define MINUTES_ONES_STEP_PIN   8
-#define MINUTES_ONES_DIR_PIN    15
-#define MINUTES_ONES_HOME_PIN   9
-#define SECONDS_TENS_STEP_PIN   10
-#define SECONDS_TENS_DIR_PIN    14
-#define SECONDS_TENS_HOME_PIN   11
-#define SECONDS_ONES_STEP_PIN   12
-#define SECONDS_ONES_DIR_PIN    15
-#define SECONDS_ONES_HOME_PIN   13
-
+#define HOURS_TENS_STEP_PIN     12
+#define HOURS_TENS_DIR_PIN      15
+#define HOURS_TENS_HOME_PIN     13
+#define HOURS_ONES_STEP_PIN     10
+#define HOURS_ONES_DIR_PIN      14
+#define HOURS_ONES_HOME_PIN     11
+#define MINUTES_TENS_STEP_PIN   8
+#define MINUTES_TENS_DIR_PIN    15
+#define MINUTES_TENS_HOME_PIN   9
+#define MINUTES_ONES_STEP_PIN   6
+#define MINUTES_ONES_DIR_PIN    14
+#define MINUTES_ONES_HOME_PIN   7
+#define SECONDS_TENS_STEP_PIN   4
+#define SECONDS_TENS_DIR_PIN    15
+#define SECONDS_TENS_HOME_PIN   5
+#define SECONDS_ONES_STEP_PIN   2
+#define SECONDS_ONES_DIR_PIN    14
+#define SECONDS_ONES_HOME_PIN   3
 
 // Control Pins
 #define ENABLE_PIN              22      // Active low - enables all stepper motors
@@ -62,17 +60,17 @@
 // MOTOR CONFIGURATION
 // ============================================================================
 #define STEPS_PER_POSITION      160     // 200 * 8 microsteps / 10 positions
-#define MOTOR_HOMING_SPEED      2500     // Steps per second during homing
+#define MOTOR_HOMING_SPEED      2500    // Steps per second during homing
 #define MOTOR_MAX_SPEED         2500    // Steps per second
-#define MOTOR_ACCELERATION      25000   // Steps per second²
+#define MOTOR_ACCELERATION      5000   // Steps per second²
 
 // Per-motor homing offset (number of steps to continue moving after the home switch is triggered)
-#define HOMING_OFFSET_STEPS_HOURS_TENS      110
-#define HOMING_OFFSET_STEPS_HOURS_ONES      90
-#define HOMING_OFFSET_STEPS_MINUTES_TENS    90
-#define HOMING_OFFSET_STEPS_MINUTES_ONES    90
-#define HOMING_OFFSET_STEPS_SECONDS_TENS    80
-#define HOMING_OFFSET_STEPS_SECONDS_ONES    100
+#define HOMING_OFFSET_STEPS_HOURS_TENS      (175 + STEPS_PER_POSITION * 10)
+#define HOMING_OFFSET_STEPS_HOURS_ONES      (167 + STEPS_PER_POSITION * 10)
+#define HOMING_OFFSET_STEPS_MINUTES_TENS    (175 + STEPS_PER_POSITION * 10)
+#define HOMING_OFFSET_STEPS_MINUTES_ONES    (170 + STEPS_PER_POSITION * 10)
+#define HOMING_OFFSET_STEPS_SECONDS_TENS    (175 + STEPS_PER_POSITION * 10)
+#define HOMING_OFFSET_STEPS_SECONDS_ONES    (169 + STEPS_PER_POSITION * 10)
 
 
 #endif // CONFIGURATION_H
