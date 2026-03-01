@@ -9,7 +9,10 @@ public:
        StepperController(AccelStepper& stepperMotor, int stepsPerPos, int homingPin, int homingOffsetSteps, bool invertDirection);
     void initialize();
     void moveToDigit(int targetDigit);
-    void run();
+
+    // returns true if the motor is still moving
+    bool run();
+    
     bool runHoming();
 
 private:

@@ -60,7 +60,7 @@ void MechanicalDisplay::updateTime(const TimeData& timeData) {
 }
 
 // This method is called from the second core's main loop to service the motors.
-void MechanicalDisplay::runMotors() {
+bool MechanicalDisplay::runMotors() {
     // if we have time data from the other core
     if(rp2040.fifo.available()) {
         // Decode and update the motors
@@ -75,13 +75,16 @@ void MechanicalDisplay::runMotors() {
 
     digitalWrite(debugPin_, HIGH);  // Start timing measurement
     
-    hoursTens_.run();
-    hoursOnes_.run();
-    minutesTens_.run();
-    minutesOnes_.run();
-    secondsTens_.run();
-    secondsOnes_.run();
+    bool anyMotorsRunning = false;
+    anyMotorsRunning |= hoursTens_.run();
+    anyMotorsRunning |= hoursOnes_.run();
+    anyMotorsRunning |= minutesTens_.run();
+    anyMotorsRunning |= minutesOnes_.run();
+    anyMotorsRunning |= secondsTens_.run();
+    anyMotorsRunning |= secondsOnes_.run();
     
     digitalWrite(debugPin_, LOW);   // End timing measurement
+
+    return anyMotorsRunning;
 }
 

@@ -79,8 +79,9 @@ void StepperController::moveToDigit(int targetDigit) {
     targetDigit_ = targetDigit;
 }
 
-void StepperController::run() {
+bool StepperController::run() {
     motor_.run();
+    return motor_.distanceToGo() != 0;
 }
 
 void StepperController::resetStepCountIfStationary() {

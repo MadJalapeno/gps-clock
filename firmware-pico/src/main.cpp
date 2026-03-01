@@ -111,5 +111,8 @@ void loop() {
 // Main loop on core 1
 void loop1() {
     // Service the stepper motors
-    mechanicalDisplay.runMotors();
+    if( ! mechanicalDisplay.runMotors()) {
+        // commit any config changes if we're idle
+        configPersistence.commitIfDirty();
+    }
 }

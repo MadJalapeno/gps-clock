@@ -30,7 +30,10 @@ public:
 
     void initialize();
     void updateTime(const TimeData& timeData);
-    void runMotors();
+
+    // returns true if any motor is still in motion
+    bool runMotors();
+
 };
 
 #endif // MECHANICAL_DISPLAY_H

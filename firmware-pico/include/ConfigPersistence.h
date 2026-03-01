@@ -14,8 +14,13 @@ public:
     bool getIs24HourFormat();
     void setIs24HourFormat(bool is24Hour);
 
+    // commit if dirty
+    void commitIfDirty();
+
 private:
     static constexpr int TIMEZONE_OFFSET_ADDR = 0;
     static constexpr int TIME_FORMAT_ADDR = 1;
     static constexpr int EEPROM_SIZE = 2; // Increased for time format
+    
+    bool isDirty_ = false;
 };
