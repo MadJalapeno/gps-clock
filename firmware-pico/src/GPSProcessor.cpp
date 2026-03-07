@@ -130,13 +130,8 @@ void GPSProcessor::processGPSData() {
 
         // Update stepper motors
         timeDisplay_.updateTime(timeData);
-    } else {
-        // GPS data not valid yet, but show satellite status
-        timeData = {0, 0, 0, 0, 0, 0, satelliteCount, false, signalStrength, is24HourFormat_, false};
+        displayController_.updateTime(timeData);
     }
-
-    // Always update display with current time
-    displayController_.updateTime(timeData);
     
     // Debug output (limit to once per second)
     static unsigned long lastDebugTime = 0;
