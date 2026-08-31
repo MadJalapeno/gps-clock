@@ -1,118 +1,207 @@
 #include <Arduino.h>
 #include <SPI.h>
+#include <TinyGPS++.h>
 
 // Include configuration
 #include "Configuration.h"
 
 // Include our classes
-#include "StepperController.h"
-#include "MechanicalDisplay.h"
-#include "GPSProcessor.h"
-#include "LEDController.h"
 #include "TFTDisplay.h"
 #include "DebouncedButton.h"
-#include "ConfigPersistence.h"
+#include "TimeData.h"
 
-// Configuration persistence
-ConfigPersistence configPersistence;
+// GPS object
+TinyGPSPlus gps_;
 
-// Stepper motors
-AccelStepper hoursTens(AccelStepper::DRIVER, HOURS_TENS_STEP_PIN, HOURS_TENS_DIR_PIN);
-AccelStepper hoursOnes(AccelStepper::DRIVER, HOURS_ONES_STEP_PIN, HOURS_ONES_DIR_PIN);  
-AccelStepper minutesTens(AccelStepper::DRIVER, MINUTES_TENS_STEP_PIN, MINUTES_TENS_DIR_PIN);
-AccelStepper minutesOnes(AccelStepper::DRIVER, MINUTES_ONES_STEP_PIN, MINUTES_ONES_DIR_PIN);
-AccelStepper secondsTens(AccelStepper::DRIVER, SECONDS_TENS_STEP_PIN, SECONDS_TENS_DIR_PIN);
-AccelStepper secondsOnes(AccelStepper::DRIVER, SECONDS_ONES_STEP_PIN, SECONDS_ONES_DIR_PIN);
-
-// Motor digit controllers
-StepperController motorHoursTens(hoursTens, STEPS_PER_POSITION, HOURS_TENS_HOME_PIN, HOMING_OFFSET_STEPS_HOURS_TENS, false);
-StepperController motorHoursOnes(hoursOnes, STEPS_PER_POSITION, HOURS_ONES_HOME_PIN, HOMING_OFFSET_STEPS_HOURS_ONES, false);
-StepperController motorMinutesTens(minutesTens, STEPS_PER_POSITION, MINUTES_TENS_HOME_PIN, HOMING_OFFSET_STEPS_MINUTES_TENS, false);
-StepperController motorMinutesOnes(minutesOnes, STEPS_PER_POSITION, MINUTES_ONES_HOME_PIN, HOMING_OFFSET_STEPS_MINUTES_ONES, false);
-StepperController motorSecondsTens(secondsTens, STEPS_PER_POSITION, SECONDS_TENS_HOME_PIN, HOMING_OFFSET_STEPS_SECONDS_TENS, false);
-StepperController motorSecondsOnes(secondsOnes, STEPS_PER_POSITION, SECONDS_ONES_HOME_PIN, HOMING_OFFSET_STEPS_SECONDS_ONES, false);
-
-// LED controller
-LEDController ledController(LED_PIN);
-
-// Mechanical display
-MechanicalDisplay mechanicalDisplay(motorHoursTens, motorHoursOnes, motorMinutesTens, motorMinutesOnes, motorSecondsTens, motorSecondsOnes, ENABLE_PIN, DEBUG_PIN);
-
-// TFT display
+// Display object
 TFTDisplay tftDisplay(TFT_CS_PIN, TFT_DC_PIN, TFT_RST_PIN);
 
-// GPS processor
-GPSProcessor gpsProcessor(configPersistence, mechanicalDisplay, tftDisplay, ledController, Serial1);
-
-// Configuration buttons
+// Button objects
 DebouncedButton timeZoneButton(TIMEZONE_BUTTON_PIN, BUTTON_DEBOUNCE_MS, BUTTON_LONG_PRESS_MS);
 DebouncedButton h24Button(H24_BUTTON_PIN, BUTTON_DEBOUNCE_MS, BUTTON_LONG_PRESS_MS);
 
-void setup() {
-    // initialize the hardware watchdog timer
-    rp2040.wdt_begin(WATCHDOG_TIMEOUT_MS);
+// Settings
+int timezoneOffsetHours = 0;
+bool is24HourFormat = true;
 
+void setup() {
     // Initialize serial communication for console output
     Serial.begin(SERIAL_BAUD_RATE);
-    Serial.println("GPS Mechanical Clock Started");
-    
-    // Select pins for GPS UART
-    Serial1.setRX(GPS_RX_PIN);
-    Serial1.setTX(GPS_TX_PIN);
+    delay(500);
+    Serial.println("\n\n=== GPS Mechanical Clock ===");
+    Serial.println("With TFT Display, LED feedback, and button controls\n");
 
-    // Select pins for TFT SPI
-    SPI.setRX(TFT_MISO_PIN);
-    SPI.setTX(TFT_MOSI_PIN);
-    SPI.setSCK(TFT_SCK_PIN);
+    // Initialize LED
+    pinMode(LED_BUILTIN, OUTPUT);
+    digitalWrite(LED_BUILTIN, LOW);
+    Serial.println("[SETUP] LED initialized");
 
-    // Initialize everything
-    configPersistence.initialize();
+    // Initialize TFT display
+    Serial.println("[SETUP] Initializing TFT display...");
+    tftDisplay.initialize();
+    tftDisplay.showWaitingForGpsScreen();
+    Serial.println("[SETUP] TFT display initialized");
+
+    // Initialize buttons
     timeZoneButton.initialize();
     h24Button.initialize();
-    ledController.initialize();
-    tftDisplay.initialize();
+    Serial.println("[SETUP] Buttons initialized");
+    Serial.println("  - Timezone button (GPIO " + String(TIMEZONE_BUTTON_PIN) + "): increment offset");
+    Serial.println("  - 24H button (GPIO " + String(H24_BUTTON_PIN) + "): toggle format");
 
-    tftDisplay.showHomingScreen();
-    mechanicalDisplay.initialize();
+    // Configure GPS UART pins
+    Serial1.setRX(GPS_RX_PIN);
+    Serial1.setTX(GPS_TX_PIN);
+    Serial1.begin(GPS_BAUD_RATE);
 
-    tftDisplay.showWaitingForGpsScreen();
-    gpsProcessor.initialize();
-    
-    // initialization is done, so we can signal core 1
+    Serial.println("[SETUP] GPS initialized at 9600 baud\n");
+    Serial.println("Waiting for GPS data...");
+    Serial.println("Current timezone offset: " + String(timezoneOffsetHours) + " hours");
+    Serial.println("Time format: " + String(is24HourFormat ? "24H" : "12H") + "\n");
+
+    // Signal core 1 that setup is complete
     rp2040.fifo.push(1);
 }
 
 void setup1() {
     // block core 1 until we get the signal
     rp2040.fifo.pop();
+    delay(500);
+    Serial.println("\n[SETUP1] Core 1 startup - setup completed!");
+    Serial.flush();
+}
+
+// Helper function to assess signal strength
+const char* getSignalStrength(double hdop, int satellites) {
+    if (satellites < 3) {
+        return "NO SIGNAL";
+    }
+    if (hdop < 1.0 && satellites >= 8) {
+        return "EXCELLENT";
+    } else if (hdop < 2.0 && satellites >= 6) {
+        return "GOOD";
+    } else if (hdop < 5.0 && satellites >= 4) {
+        return "MODERATE";
+    } else if (hdop < 10.0 && satellites >= 3) {
+        return "FAIR";
+    } else {
+        return "POOR";
+    }
 }
 
 // Main loop on core 0
 void loop() {
-    // Handle configuration buttons
+    // Check buttons
     DebouncedButton::PressType tzPress = timeZoneButton.checkButton();
     if (tzPress == DebouncedButton::Short) {
-        Serial.println("Timezone button short press detected, incrementing timezone offset");
-        gpsProcessor.incrementTimezoneOffset();
+        timezoneOffsetHours++;
+        if (timezoneOffsetHours > 12) {
+            timezoneOffsetHours = -12;
+        }
+        Serial.print("[BUTTON] Timezone changed to: ");
+        Serial.print(timezoneOffsetHours);
+        Serial.println(" hours");
     }
+
     DebouncedButton::PressType h24Press = h24Button.checkButton();
     if (h24Press == DebouncedButton::Short) {
-        Serial.println("24H format button short press detected, toggling time format");
-        gpsProcessor.toggleTimeFormat();
+        is24HourFormat = !is24HourFormat;
+        Serial.print("[BUTTON] Time format changed to: ");
+        Serial.println(is24HourFormat ? "24H" : "12H");
     }
 
-    // Process GPS data using GPSProcessor
-    gpsProcessor.processIncomingData();
+    // Process GPS data
+    static unsigned long lastReport = 0;
+    static bool lastValidState = false;
 
-    // let the watchdog know we're still alive
-    rp2040.wdt_reset();
+    while (Serial1.available()) {
+        char c = Serial1.read();
+        if (gps_.encode(c)) {
+            // Complete NMEA sentence parsed
+        }
+    }
+
+    // Update display and report GPS status every 2 seconds
+    if (millis() - lastReport > 2000) {
+        int sats = gps_.satellites.value();
+        double hdop = gps_.hdop.hdop();
+        bool valid = gps_.time.isValid() && sats >= 3;
+        const char* signalStr = getSignalStrength(hdop, sats);
+
+        // Toggle LED when valid, off when invalid
+        if (valid != lastValidState) {
+            digitalWrite(LED_BUILTIN, valid ? HIGH : LOW);
+            lastValidState = valid;
+        }
+
+        if (valid) {
+            // Calculate local time with timezone offset
+            int utcHour = gps_.time.hour();
+            int utcMin = gps_.time.minute();
+            int utcSec = gps_.time.second();
+
+            int localHour = utcHour + timezoneOffsetHours;
+            if (localHour < 0) localHour += 24;
+            if (localHour >= 24) localHour -= 24;
+
+            // Determine AM/PM for 12H format
+            bool isPm = false;
+            if (!is24HourFormat) {
+                if (localHour >= 12) isPm = true;
+                if (localHour == 0) localHour = 12;
+                if (localHour > 12) localHour -= 12;
+            }
+
+            // Create TimeData for display
+            TimeData timeData = {
+                utcHour, utcMin, utcSec,
+                localHour, utcMin, utcSec,
+                sats,
+                true,
+                signalStr,
+                is24HourFormat,
+                isPm
+            };
+
+            // Update display
+            tftDisplay.updateTime(timeData);
+
+            // Serial output
+            Serial.print("[GPS] Sats: ");
+            Serial.print(sats);
+            Serial.print(" | Time: ");
+            if (localHour < 10) Serial.print("0");
+            Serial.print(localHour);
+            Serial.print(":");
+            if (utcMin < 10) Serial.print("0");
+            Serial.print(utcMin);
+            Serial.print(":");
+            if (utcSec < 10) Serial.print("0");
+            Serial.print(utcSec);
+            if (!is24HourFormat) {
+                Serial.print(" ");
+                Serial.print(isPm ? "PM" : "AM");
+            }
+            Serial.println();
+        } else {
+            // Waiting for fix
+            TimeData timeData = {
+                0, 0, 0,
+                0, 0, 0,
+                sats,
+                false,
+                signalStr,
+                is24HourFormat,
+                false
+            };
+            tftDisplay.updateTime(timeData);
+            Serial.println("[GPS] Acquiring satellite lock...");
+        }
+        lastReport = millis();
+    }
 }
 
 // Main loop on core 1
 void loop1() {
-    // Service the stepper motors
-    if( ! mechanicalDisplay.runMotors()) {
-        // commit any config changes if we're idle
-        configPersistence.commitIfDirty();
-    }
+    delay(100);  // Minimal work - just keep core 1 alive
 }

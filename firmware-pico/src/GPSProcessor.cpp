@@ -47,7 +47,7 @@ bool GPSProcessor::getIs24HourFormat() const {
 void GPSProcessor::processIncomingData() {
     while (serial_.available()) {
         char gpsChar = serial_.read();
-        
+
         // Feed character to TinyGPS++ for parsing
         if (gps_.encode(gpsChar)) {
             // TinyGPS++ has successfully parsed a complete sentence
@@ -139,15 +139,47 @@ void GPSProcessor::processGPSData() {
     if (currentMillis - lastDebugTime >= 1000) {
         lastDebugTime = currentMillis;
         if (timeIsValid) {
-            Serial.print("GPS Time Valid - Satellites: ");
+            Serial.print("[GPS] VALID - Sats: ");
             Serial.print(satelliteCount);
             Serial.print(" | HDOP: ");
             Serial.print(hdop, 1);
             Serial.print(" | Signal: ");
-            Serial.println(signalStrength);
+            Serial.print(signalStrength);
+            Serial.print(" | UTC: ");
+            if (gps_.time.hour() < 10) Serial.print("0");
+            Serial.print(gps_.time.hour());
+            Serial.print(":");
+            if (gps_.time.minute() < 10) Serial.print("0");
+            Serial.print(gps_.time.minute());
+            Serial.print(":");
+            if (gps_.time.second() < 10) Serial.print("0");
+            Serial.print(gps_.time.second());
+            Serial.print(" | Local: ");
+            int localHours = gps_.time.hour() + timezoneOffsetHours_;
+            if (localHours < 0) {
+                localHours += 24;
+            } else if (localHours >= 24) {
+                localHours -= 24;
+            }
+            if (localHours < 10) Serial.print("0");
+            Serial.print(localHours);
+            Serial.print(":");
+            if (gps_.time.minute() < 10) Serial.print("0");
+            Serial.print(gps_.time.minute());
+            Serial.print(":");
+            if (gps_.time.second() < 10) Serial.print("0");
+            Serial.print(gps_.time.second());
+            Serial.print(" | Date: ");
+            Serial.print(gps_.date.month());
+            Serial.print("/");
+            Serial.print(gps_.date.day());
+            Serial.print("/");
+            Serial.println(gps_.date.year());
         } else {
-            Serial.print("GPS acquiring... Satellites: ");
+            Serial.print("[GPS] ACQUIRING - Sats: ");
             Serial.print(satelliteCount);
+            Serial.print(" | HDOP: ");
+            Serial.print(hdop, 1);
             Serial.print(" | Signal: ");
             Serial.println(signalStrength);
         }

@@ -11,11 +11,23 @@
 // HARDWARE CONFIGURATION
 // ============================================================================
 
-// TFT Display Pin Assignments
-#define TFT_MISO_PIN            16       // Hardware SPI MISO
+// ============================================================================
+// TFT Display (ST7735) Pin Assignments - SPI Interface
+// ============================================================================
+// Display Module Wiring:
+//   Display GND   → Pico GND
+//   Display VCC   → Pico 3.3V
+//   Display SCL   → Pico GPIO 18 (SPI Clock)
+//   Display SDA   → Pico GPIO 19 (SPI Data/MOSI)
+//   Display RES   → Pico GPIO 21 (Reset)
+//   Display DC    → Pico GPIO 20 (Data/Command)
+//   Display CS    → Pico GPIO 17 (Chip Select)
+//   Display BLK   → Pico 3.3V (Backlight - always on)
+// ============================================================================
+#define TFT_MISO_PIN            16       // Hardware SPI MISO (not used - write-only)
 #define TFT_CS_PIN              17       // TFT chip select
-#define TFT_SCK_PIN             18       // Hardware SPI SCK
-#define TFT_MOSI_PIN            19       // Hardware SPI MOSI
+#define TFT_SCK_PIN             18       // Hardware SPI SCK (Display SCL)
+#define TFT_MOSI_PIN            19       // Hardware SPI MOSI (Display SDA)
 #define TFT_DC_PIN              20       // TFT data/command
 #define TFT_RST_PIN             21       // TFT reset
 

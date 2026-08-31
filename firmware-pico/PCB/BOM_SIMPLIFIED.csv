@@ -1,0 +1,69 @@
+Reference,Value,Package,Description,Quantity,Unit Price,Total,Supplier,Part Number
+"Power Input & Protection"
+J1,24V Connector,2-pin 2.54mm,24V Power Input Connector,1,2.00,2.00,Generic,JST-PH-2.54
+D1,1N4007,DO-41,Reverse Polarity Protection Diode,1,0.10,0.10,Generic,1N4007
+F1,10A Fuse,Radial 5mm,10A Fuse for 24V Protection,1,0.30,0.30,Generic,10A-fuse
+
+"Buck Converter (24V to 5V)"
+U1,MP1584,SOIC-8,Step-down DC/DC Converter 24V to 5V,1,1.50,1.50,Generic,MP1584EN
+L1,10µH,1210,10µH 1.5A Inductor,1,0.50,0.50,Generic,CDRH127R-100MC
+
+"Buck Converter Support (Bulk Caps)"
+C1,470µF,Radial 8mm,470µF 50V Electrolytic Capacitor (input/bulk),1,0.40,0.40,Generic,470µF-50V
+C2,100nF,0805,100nF 50V Ceramic Capacitor (buck input),1,0.05,0.05,Generic,0805-100nF
+
+"Buck Converter Output Filter"
+C3,100µF,1206,100µF 10V Ceramic Capacitor (5V output bulk),1,0.30,0.30,Generic,1206-100µF
+C4,10µF,1206,10µF 10V Ceramic Capacitor (5V output mid-freq),1,0.15,0.15,Generic,1206-10µF
+C5,1µF,0805,1µF 10V Ceramic Capacitor (5V high-freq filter),1,0.05,0.05,Generic,0805-1µF
+
+"Buck Converter Feedback Network"
+R1,1MΩ,0805,1MΩ Feedback Resistor (buck converter),1,0.05,0.05,Generic,0805-1M
+R2,240kΩ,0805,240kΩ Feedback Resistor (buck converter),1,0.05,0.05,Generic,0805-240k
+
+"24V & 5V Rail Distribution Capacitors"
+C6,100µF,Radial 8mm,100µF 50V Electrolytic (24V rail bulk),1,0.40,0.40,Generic,100µF-50V
+C7,100nF,0805,100nF Ceramic (24V rail decoupling),1,0.05,0.05,Generic,0805-100nF
+C8,100nF,0805,100nF Ceramic (5V rail decoupling),1,0.05,0.05,Generic,0805-100nF
+
+"Signal Protection (Optional but Recommended)"
+R3-R8,100Ω,0805,100Ω Series Resistor (STEP/DIR signal integrity ×6),6,0.05,0.30,Generic,0805-100
+R9-R14,10kΩ,0805,10kΩ Pull-down Resistor (STEP/DIR ×6),6,0.05,0.30,Generic,0805-10k
+
+"Power Distribution Connectors"
+J2,24V Power Bus,2-pin 2.54mm,Power distribution to stepper modules (24V/GND),1,2.00,2.00,Generic,JST-PH-2.54
+J3,5V Power Bus,2-pin 2.54mm,Power distribution to Pico (5V/GND),1,2.00,2.00,Generic,JST-PH-2.54
+
+"Stepper Module Connectors (×6)"
+J4,Stepper Module 1,3-pin 2.54mm,24V + GND + Signal header for TMC2208 module,1,1.50,1.50,Generic,3-pin-header
+J5,Stepper Module 2,3-pin 2.54mm,24V + GND + Signal header for TMC2208 module,1,1.50,1.50,Generic,3-pin-header
+J6,Stepper Module 3,3-pin 2.54mm,24V + GND + Signal header for TMC2208 module,1,1.50,1.50,Generic,3-pin-header
+J7,Stepper Module 4,3-pin 2.54mm,24V + GND + Signal header for TMC2208 module,1,1.50,1.50,Generic,3-pin-header
+J8,Stepper Module 5,3-pin 2.54mm,24V + GND + Signal header for TMC2208 module,1,1.50,1.50,Generic,3-pin-header
+J9,Stepper Module 6,3-pin 2.54mm,24V + GND + Signal header for TMC2208 module,1,1.50,1.50,Generic,3-pin-header
+
+"Motor Connectors (Pass-Through from Modules) (×6)"
+J10,Motor Out 1,4-pin 2.54mm,Motor connector (routed from stepper module),1,1.00,1.00,Generic,4-pin-header
+J11,Motor Out 2,4-pin 2.54mm,Motor connector (routed from stepper module),1,1.00,1.00,Generic,4-pin-header
+J12,Motor Out 3,4-pin 2.54mm,Motor connector (routed from stepper module),1,1.00,1.00,Generic,4-pin-header
+J13,Motor Out 4,4-pin 2.54mm,Motor connector (routed from stepper module),1,1.00,1.00,Generic,4-pin-header
+J14,Motor Out 5,4-pin 2.54mm,Motor connector (routed from stepper module),1,1.00,1.00,Generic,4-pin-header
+J15,Motor Out 6,4-pin 2.54mm,Motor connector (routed from stepper module),1,1.00,1.00,Generic,4-pin-header
+
+"Pico Interface Connector"
+J16,Pico Interface,40-pin header,Connector for Raspberry Pi Pico,1,3.00,3.00,Generic,40-pin-header
+
+"PCB & Assembly"
+PCB,Custom PCB,2-layer,GPS Clock Stepper Distribution PCB,1,10.00,10.00,Custom,Custom-design
+
+"TOTALS"
+"Component Total (excluding PCB)","","",,,"",21.65,"",""
+"With PCB","","",,,"",31.65,"",""
+
+"NOTES"
+"","All resistors are 0.25W unless specified otherwise"
+"","All capacitors rated 50V minimum unless specified"
+"","Much simpler than IC-based design - just distribution + power regulation"
+"","Stepper modules handle all driver complexity"
+"","Optional signal protection resistors can be omitted if space is tight"
+"","Estimated savings: $15-20 vs. bare IC approach"

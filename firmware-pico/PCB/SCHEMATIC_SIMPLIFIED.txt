@@ -1,0 +1,175 @@
+GPS CLOCK STEPPER DRIVER PCB - SIMPLIFIED SCHEMATIC
+===================================================
+Using Pre-Built Stepper Driver Modules
+
+POWER INPUT SECTION
+-------------------
+J1: 24V Power Connector (2-pin, 2.54mm spacing)
+  Pin 1: +24V_IN
+  Pin 2: GND
+
+D1: 1N4007 Diode (Reverse Polarity Protection)
+  Anode: +24V_IN
+  Cathode: +24V_RAIL
+
+F1: 10A Fuse (radial or cartridge)
+  Series with +24V to protect entire circuit
+
+C1: 470µF 50V Electrolytic Capacitor
+  +: +24V_RAIL
+  -: GND
+  Purpose: Bulk capacitance for transient response
+
+C2: 100nF Ceramic Capacitor
+  Between +24V_RAIL and GND
+  Purpose: High-frequency filtering
+
+
+BUCK CONVERTER SECTION (24V → 5V)
+---------------------------------
+Buck IC: MP1584 (SOIC-8 package)
+
+Input Side:
+  VIN: +24V_RAIL (with C2 nearby)
+  GND: GND
+
+Output Side:
+  VOUT: +5V_RAIL
+  GND: GND
+
+Support Components:
+  L1: 10µH Inductor (1.5A rated)
+  C_in: 100nF Ceramic (input, before inductor)
+  C_out: 100µF 10V Ceramic (output bulk)
+  C_out: 10µF 10V Ceramic (output mid-freq)
+  C_out: 1µF 10V Ceramic (output high-freq)
+
+Feedback Network (for 5V output):
+  R1: 1MΩ resistor (feedback divider, top)
+  R2: 240kΩ resistor (feedback divider, bottom)
+  Connection: R1 between VOUT and FB pin
+            R2 between FB pin and GND
+
+
+24V & 5V RAIL DISTRIBUTION
+--------------------------
+From buck converter output (+5V_RAIL):
+  C3: 100µF ceramic (bulk smoothing)
+  C4: 10µF ceramic (mid-frequency)
+  C5: 1µF ceramic (high-frequency filter)
+
+From 24V rail:
+  C6: 100µF electrolytic (bulk smoothing)
+  C7: 100nF ceramic (decoupling)
+
+From 5V rail:
+  C8: 100nF ceramic (decoupling)
+
+
+STEPPER MODULE DISTRIBUTION (×6)
+--------------------------------
+Each module connects via a dedicated 3-pin header:
+
+  Module_N Header:
+    Pin 1: +24V_RAIL (directly from 24V distribution)
+    Pin 2: GND (from ground plane)
+    Pin 3: STEP/DIR signals from Pico
+
+Signal path for each module:
+  Pico GPIO (STEP) → 100Ω Series Resistor → 10kΩ Pull-down to GND → Stepper Module
+  Pico GPIO (DIR)  → 100Ω Series Resistor → 10kΩ Pull-down to GND → Stepper Module
+
+Signal Protection (OPTIONAL - can be omitted):
+  R3-R8: 100Ω series resistors on STEP/DIR lines (one per module pair)
+  R9-R14: 10kΩ pull-down resistors on STEP/DIR inputs (one per signal)
+  Purpose: Noise immunity and signal integrity
+
+Note: The stepper modules handle:
+  - Motor current regulation
+  - Heat management
+  - Enable/disable logic (if applicable)
+  - Any on-board filtering
+
+
+MOTOR CONNECTORS (×6)
+--------------------
+Motors connect directly to the stepper module boards:
+  Motor_Out_N: 4-pin connector (pass-through from module)
+
+Pin mapping (standard stepper motor):
+  Pin 1: Motor Phase A1
+  Pin 2: Motor Phase A2
+  Pin 3: Motor Phase B1
+  Pin 4: Motor Phase B2
+
+Recommended: JST XH 2.54mm connectors
+
+
+PICO CONNECTOR
+--------------
+J16: 40-pin header connection to Pico
+
+Required GPIO connections:
+  GPIO0: GPS TX
+  GPIO1: GPS RX
+  GPIO2: Stepper 5 STEP (Seconds Ones)
+  GPIO4: Stepper 4 STEP (Seconds Tens)
+  GPIO6: Stepper 3 STEP (Minutes Ones)
+  GPIO8: Stepper 2 STEP (Minutes Tens)
+  GPIO10: Stepper 1 STEP (Hours Ones)
+  GPIO12: Stepper 0 STEP (Hours Tens)
+  GPIO14: Stepper DIR (odd-numbered motors)
+  GPIO15: Stepper DIR (even-numbered motors)
+  GPIO17: TFT CS
+  GPIO18: TFT SCK
+  GPIO19: TFT MOSI
+  GPIO20: TFT DC
+  GPIO21: TFT RST
+  GPIO26: Timezone Button
+  GPIO27: 24H Button
+
+  3V3_OUT: 5V rail (via current-limiting resistor if powering from Pico)
+  5V: +5V_RAIL input (if powered from this PCB)
+  GND: Ground plane (multiple pins)
+
+Note: Pico operates at 3.3V logic internally
+      Stepper modules typically accept 3.3V-5V logic levels
+      Pull-down resistors help with signal integrity
+
+
+CONNECTIVITY SUMMARY
+--------------------
+Power Distribution:
+  +24V_RAIL: From input → Fuse → all stepper modules
+  +5V_RAIL: From buck converter output → Pico (optional)
+  GND: Common ground plane across entire PCB
+
+Signal Paths:
+  Pico GPIO → 100Ω resistor → 10kΩ pull-down → Stepper module
+  Motor phases: Routed directly from stepper module to motor connector
+
+Ground Plane:
+  Continuous ground plane on PCB
+  Multiple vias connecting all components to ground plane
+  Low-impedance return paths for all signals
+
+
+SIMPLIFIED DESIGN ADVANTAGES
+----------------------------
+✓ Much simpler PCB layout (just power + signal distribution)
+✓ Fewer components (~25 vs. 80+ for IC-based design)
+✓ No need for individual driver support circuitry
+✓ Better reliability (module handles driver complexity)
+✓ Easier to troubleshoot (swap modules if needed)
+✓ Cost-effective (~$30 vs. $50+ for IC approach)
+✓ Smaller PCB footprint possible
+✓ Modules can be tested independently
+
+DESIGN NOTES
+-----------
+- Buck converter must supply at least 200mA for Pico + logic
+- Each stepper module draws 24V directly from supply
+- Signal integrity improved with series + pull-down resistors
+- Optional signal resistors can be omitted if noise is not an issue
+- Bulk capacitor C1 critical for stable 24V rail
+- Decoupling capacitors help stepper module performance

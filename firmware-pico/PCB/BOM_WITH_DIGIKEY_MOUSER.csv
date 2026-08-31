@@ -1,0 +1,83 @@
+Reference,Value,Package,Description,Qty,Digi-Key Part #,Mouser Part #,Digi-Key Price,Mouser Price,Notes
+"POWER INPUT & PROTECTION"
+J1,24V Power Connector,2-pin 2.54mm JST,24V Input Power Connector,1,455-2176-ND,649-1725675,2.12,2.10,JST PH 2-pin
+D1,1N4007,DO-41 THT,Rectifier Diode 1000V 1A,1,1N4007FS-ND,512-1N4007,0.06,0.04,Standard rectifier
+F1,10A Fuse,Radial 5mm Diameter,10A Fuse 250V,1,F11A-ND,576-0215010.HXP,0.28,0.24,Radial fuse holder type
+
+"BUCK CONVERTER MAIN IC"
+U1,MP1584,SOIC-8 SMD,MP1584 Step-Down DC/DC Converter,1,MP1584EN-ND,579-MP1584EN,1.42,1.38,Input 4.5-28V Output adjustable
+
+"BUCK CONVERTER INDUCTOR"
+L1,10µH 1.5A,1210 SMD,Shielded Power Inductor 10µH,1,490-16343-1-ND,652-CDRH127R-100MC,0.48,0.54,1210 package 1.5A rated
+
+"BUCK CONVERTER - INPUT FILTERING"
+C1,470µF 50V,Radial 8mm THT,Electrolytic Capacitor 470µF 50V,1,P6153-ND,140-XRL50V470,0.38,0.42,Input bulk capacitor
+C2,100nF 50V,0805 SMD,Ceramic Capacitor 100nF 50V X7R,1,399-3690-1-ND,581-08055C104K4Z2A,0.06,0.09,Buck input bypass
+
+"BUCK CONVERTER - OUTPUT FILTERING"
+C3,100µF 10V,1206 SMD,Ceramic Capacitor 100µF 10V X7R,1,399-13853-1-ND,581-12065C107M7T,0.32,0.38,Output bulk
+C4,10µF 10V,1206 SMD,Ceramic Capacitor 10µF 10V X7R,1,399-8846-1-ND,581-12065C106M7T,0.16,0.17,Output mid-freq
+C5,1µF 10V,0805 SMD,Ceramic Capacitor 1µF 10V X7R,1,399-3919-1-ND,581-08055C105K4Z2A,0.08,0.09,Output high-freq filter
+
+"BUCK CONVERTER - FEEDBACK NETWORK"
+R1,1MΩ 1/4W,0805 SMD,Resistor 1MΩ 1/4W 1% Metal Film,1,RMCF0805FT1M00CT-ND,603-RC0805FR-071ML,0.04,0.05,Feedback divider top
+R2,240kΩ 1/4W,0805 SMD,Resistor 240kΩ 1/4W 1% Metal Film,1,RMCF0805FT240KCT-ND,603-RC0805FR-07240KL,0.04,0.05,Feedback divider bottom
+
+"24V & 5V RAIL DISTRIBUTION"
+C6,100µF 50V,Radial 8mm THT,Electrolytic Capacitor 100µF 50V,1,P6066-ND,140-XRL50V100,0.38,0.42,24V rail bulk cap
+C7,100nF,0805 SMD,Ceramic Capacitor 100nF 50V X7R,1,399-3690-1-ND,581-08055C104K4Z2A,0.06,0.09,24V rail decoupling
+C8,100nF,0805 SMD,Ceramic Capacitor 100nF 10V X7R,1,399-3690-1-ND,581-08055C104K4Z2A,0.06,0.09,5V rail decoupling
+
+"SIGNAL PROTECTION - SERIES RESISTORS (OPTIONAL)"
+R3,100Ω 1/4W,0805 SMD,Resistor 100Ω 1/4W 1% Metal Film,6,RMCF0805FT100RCT-ND,603-RC0805FR-07100RL,0.04,0.04,STEP/DIR series protection (6×)
+
+"SIGNAL PROTECTION - PULL-DOWN RESISTORS (OPTIONAL)"
+R9,10kΩ 1/4W,0805 SMD,Resistor 10kΩ 1/4W 1% Metal Film,6,RMCF0805FT10K0CT-ND,603-RC0805FR-0710KL,0.04,0.04,STEP/DIR pull-down (6×)
+
+"POWER DISTRIBUTION CONNECTORS"
+J2,Power Bus Connector,2-pin 2.54mm JST,24V/GND Power Distribution,1,455-2176-ND,649-1725675,2.12,2.10,JST PH 2-pin (24V to modules)
+J3,5V Bus Connector,2-pin 2.54mm JST,5V/GND Power Distribution,1,455-2176-ND,649-1725675,2.12,2.10,JST PH 2-pin (5V for Pico)
+
+"STEPPER MODULE SIGNAL CONNECTORS (×6)"
+J4-J9,Stepper Module Header,3-pin 2.54mm,Stepper Module Interface Header,6,S7002-ND,649-68001-103HLF,1.48,1.45,3-pin straight header (6× for modules)
+
+"MOTOR OUTPUT CONNECTORS (×6)"
+J10-J15,Motor Connector,4-pin 2.54mm,Motor Output Connector,6,S7004-ND,649-68001-104HLF,1.70,1.65,4-pin straight header (6× for motors)
+
+"PICO INTERFACE CONNECTOR"
+J16,Pico Header,2×20 40-pin,Pico Microcontroller Interface,1,S2011EC-40-ND,649-68001-240HLF,3.24,3.15,2×20 pin header for Pico
+
+"PCB"
+PCB,Custom PCB,2-layer,GPS Clock Stepper Distribution Board,1,N/A,N/A,10.00,10.00,Order from JLCPCB/PCBWay
+
+"TOTALS"
+"Component Total (excl. PCB)",,,,,"","",21.54,21.85,""
+"Component Total (incl. optional signal resistors)",,,,,"","",22.12,22.49,""
+"With 2-layer PCB (est.)",,,,,"","",31.54,32.85,""
+
+"ORDERING NOTES"
+"","Digi-Key part numbers current as of 2026-08-30 - verify stock before ordering"
+"","Mouser part numbers current as of 2026-08-30 - verify stock before ordering"
+"","Prices are approximate single-unit pricing - volume discounts available"
+"","Most components available for immediate shipment from both suppliers"
+"","Alternative suppliers: LCSC.com (lower prices, longer lead times) and Amazon (convenience)"
+
+"RECOMMENDED QUANTITIES FOR ORDERING"
+"","Order 1× of each connector (or 2× if building multiple boards)"
+"","Order 1× of each IC (MP1584 easy to swap if damaged)"
+"","Resistors/Caps: Stock many extras (10-20% overage recommended)"
+"","Common 0805 resistors: 10kΩ, 100Ω available everywhere"
+"","Common 0805/1206 caps: 100nF, 100µF, 10µF - stock at multiple suppliers"
+
+"COMPONENT SUBSTITUTIONS"
+"Buck Converter","MP1584 preferred, but compatible alternatives:"
+"","LM2596 (older, larger SO-8 package)"
+"","XL4005 (higher efficiency)"
+"","LD7550 (similar pinout)"
+"Inductors","10µH 1210 preferred, alternatives:"
+"","10µH 1206 (lower current rating but works for Pico draw)"
+"","12µH 1210 (very close performance)"
+"Connectors","All 2.54mm standard pitch - many manufacturers available"
+"","Molex KK series equivalent to JST PH"
+"","TE Connectivity alternatives also work"
+"","Samtec headers also compatible"
