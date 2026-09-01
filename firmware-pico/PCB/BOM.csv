@@ -1,0 +1,54 @@
+Reference,Value,Package,Description,Quantity,Unit Price,Total,Supplier,Part Number
+"Power Input"
+J1,24V Connector,2-pin 2.54mm,24V Power Input Connector,1,2.00,2.00,Generic,JST-PH-2.54
+D1,1N4007,DO-41,Reverse Polarity Protection Diode,1,0.10,0.10,Generic,1N4007
+F1,10A Fuse,Radial 5mm,10A Fuse for 24V Protection,1,0.30,0.30,Generic,10A-fuse
+
+"Buck Converter (24V to 5V)"
+U1,MP1584,SOIC-8,Step-down DC/DC Converter 24V to 5V,1,1.50,1.50,Generic,MP1584EN
+L1,10µH,1210,10µH 1.5A Inductor,1,0.50,0.50,Generic,CDRH127R-100MC
+C1,470µF,Radial 8mm,470µF 50V Electrolytic Capacitor,1,0.40,0.40,Generic,470µF-50V
+C2,100nF,0805,100nF 50V Ceramic Capacitor (input),1,0.05,0.05,Generic,0805-100nF
+C3,100µF,1206,100µF 10V Ceramic Capacitor (output),1,0.30,0.30,Generic,1206-100µF
+C4,10µF,1206,10µF 10V Ceramic Capacitor (output),1,0.15,0.15,Generic,1206-10µF
+C5,1µF,0805,1µF 10V Ceramic Capacitor (high-freq filter),1,0.05,0.05,Generic,0805-1µF
+R1,1MΩ,0805,1MΩ Feedback Resistor (buck converter),1,0.05,0.05,Generic,0805-1M
+R2,240kΩ,0805,240kΩ Feedback Resistor (buck converter),1,0.05,0.05,Generic,0805-240k
+
+"TMC2208 Stepper Drivers (×6)"
+U2-U7,TMC2208,SOIC-16,Stepper Motor Driver (silent),6,2.50,15.00,Generic,TMC2208-LA-T
+"Support Capacitors per Driver (×6 sets)"
+C6-C11,100µF,Radial 8mm,100µF 50V Electrolytic (VM bulk per driver),6,0.40,2.40,Generic,100µF-50V
+C12-C17,10µF,1206,10µF 10V Ceramic (VM mid-freq per driver),6,0.15,0.90,Generic,1206-10µF
+C18-C23,100nF,0805,100nF Ceramic (VM high-freq per driver),6,0.05,0.30,Generic,0805-100nF
+C24-C29,100nF,0805,100nF Ceramic (VIO logic supply per driver),6,0.05,0.30,Generic,0805-100nF
+
+"Current Sense per Driver (×6)"
+R3-R8,0.11Ω,1206,0.11Ω 2W Shunt Resistor (current sense),6,0.30,1.80,Generic,1206-0R11-2W
+C30-C35,10nF,0603,10nF Ceramic (sense filter per driver),6,0.05,0.30,Generic,0603-10nF
+
+"Pull-down Resistors (STEP/DIR signals) (×12)"
+R9-R20,10kΩ,0805,10kΩ Pull-down Resistor (STEP/DIR),12,0.05,0.60,Generic,0805-10k
+
+"Signal Protection (optional but recommended)"
+R21-R26,100Ω,0805,100Ω Series Resistor (STEP/DIR signal integrity),6,0.05,0.30,Generic,0805-100
+
+"Connectors"
+J2-J7,Motor Connector,4-pin 2.54mm,Motor Phase A/B Connector (×6),6,1.00,6.00,Generic,JST-XH-4P
+J8,Pico Connector,40-pin Header,Pico Microcontroller Connector,1,3.00,3.00,Generic,2.54mm-header-40p
+
+"PCB & Assembly"
+PCB,Custom PCB,2-layer,GPS Clock Stepper Driver PCB,1,15.00,15.00,Custom,Custom-design
+Stencil,Solder Stencil,Laser cut,Stencil for solder paste application,1,5.00,5.00,Custom,Optional
+
+"TOTALS"
+"Component Total (excluding PCB)","","",,,"",27.25,"",""
+"With PCB & Stencil","","",,,"",47.25,"",""
+
+"NOTES"
+"","All resistors are 0.25W unless specified"
+"","All capacitors rated 50V minimum except noted otherwise"
+"","TMC2208 drivers can be sourced from Aliexpress or LCSC at ~$2-3 each"
+"","Recommend ordering 10% extra passives for rework"
+"","Buck converter can be sourced pre-assembled module if preferred"
+"","Ensure 2oz+ copper weight for power planes (heat dissipation)"

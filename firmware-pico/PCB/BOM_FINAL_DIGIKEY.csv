@@ -1,0 +1,104 @@
+Reference,Value,Package,Description,Qty,Digi-Key Part #,Unit Price,Extended Price,Notes
+"24V INPUT PROTECTION & FILTERING"
+D1,1N4007,DO-41 THT,Rectifier Diode 1000V 1A,1,1N4007FS-ND,0.06,0.06,Reverse polarity protection
+F1,10A Fuse,Radial 5mm,Fuse 10A 250V,1,F11A-ND,0.28,0.28,Input protection
+C1,470µF 50V,Radial 8mm THT,Electrolytic Capacitor,1,P6153-ND,0.38,0.38,Bulk capacitor for 24V input
+
+"24V RAIL DECOUPLING"
+C2,100nF 50V,0805 SMD,Ceramic Capacitor,1,399-3690-1-ND,0.06,0.06,High-frequency filtering
+
+"5V RAIL FILTERING (for buck converter output)"
+C3,100µF 10V,1206 SMD,Ceramic Capacitor,1,399-13853-1-ND,0.32,0.32,Output bulk capacitor
+C4,10µF 10V,1206 SMD,Ceramic Capacitor,1,399-8846-1-ND,0.16,0.16,Output mid-frequency
+C5,100nF,0805 SMD,Ceramic Capacitor,1,399-3690-1-ND,0.06,0.06,Output high-frequency
+
+"SIGNAL INTEGRITY (OPTIONAL - for clean STEP/DIR signals)"
+R1-R6,100Ω 1/4W,0805 SMD,Resistor - STEP/DIR series protection,6,RMCF0805FT100RCT-ND,0.04,0.24,Series resistor on signal lines (buy qty 10 pack or more for cost savings)
+R7-R12,10kΩ 1/4W,0805 SMD,Resistor - STEP/DIR pull-down,6,RMCF0805FT10K0CT-ND,0.04,0.24,Pull-down resistors to ground (buy qty 10 pack)
+
+"CONNECTORS FOR PCB"
+J1,40-pin Header,2×20 2.54mm,Raspberry Pi Pico connector,1,S2011EC-40-ND,3.24,3.24,Pico interface
+J2,3-pin Header,2.54mm,Buck converter module connector,1,S7002-ND,1.48,1.48,24V buck converter input (or use pre-made connector cable)
+J3,2-pin Connector,2.54mm,24V power output for stepper modules,1,455-2176-ND,2.12,2.12,Already have PH connectors - may not need this
+
+"PCB FABRICATION"
+PCB,Custom 2-layer PCB,80×100mm,GPS Clock distribution board,1,N/A,10.00,10.00,JLCPCB or PCBWay (not from Digi-Key)
+
+"TOTALS"
+"Component Total from Digi-Key",,,,,"","",7.70,""
+"With signal resistors (buy bulk 10-pack)",,,,,"","",8.46,"Optional"
+"Estimated PCB cost (external)",,,,,"","",10.00,"JLCPCB/PCBWay"
+"Total with PCB",,,,,"","",17.70,"Minimum setup"
+
+"NOTES & SPECIFICATIONS"
+"","You already have: Pico, GPS module, display, buck converter, stepper drivers, PH connectors"
+"","This PCB is mainly a distribution board and power filtering"
+"","All listed Digi-Key parts in stock as of 2026-08-30"
+"","Consider buying resistor/cap 10-packs from Digi-Key for better pricing"
+
+"ALTERNATIVE - BUY RESISTORS/CAPS IN 10-PACKS"
+"Digi-Key 10-pack items (more economical):"
+"","RMCF0805FT100RCT-10,1206-10-ND: 10×100Ω resistors (~$0.30 total)"
+"","RMCF0805FT10K0CT-10,1206-10-ND: 10×10kΩ resistors (~$0.30 total)"
+"","Use 6 each, keep extras for spares/prototyping"
+
+"SIGNAL RESISTORS - DETAILED EXPLANATION"
+"Series Resistors (100Ω)","Protect Pico GPIO outputs from noise on stepper signal lines"
+"","Optional but recommended for reliable operation over long cable runs"
+"","Place one 100Ω resistor in series with each STEP/DIR signal"
+"","Total: 6 resistors (one per stepper module pair - 2 motors per resistor)"
+
+"Pull-down Resistors (10kΩ)","Ensure STEP/DIR inputs default to LOW when Pico is not driving"
+"","Prevents floating inputs on stepper modules during startup"
+"","Optional but recommended for stability"
+"","Total: 6 resistors (one per signal line)"
+
+"MINIMAL SETUP (if omitting signal resistors)"
+"Skip R1-R12 if confident in short cable runs (<5m)"
+"Cost reduction: ~$0.50"
+"Risk: Potential noise on stepper control signals"
+
+"RECOMMENDED SETUP"
+"Include all resistors as shown"
+"Cost increase: ~$0.75"
+"Benefit: Better reliability and noise immunity"
+"Professional approach: Always include signal protection on motor control lines"
+
+"DIGI-KEY SHOPPING TIPS"
+"1. Add all items to cart from Digi-Key"
+"2. Consider joining Digi-Key+ for free shipping on $25+ orders"
+"3. Most SMD components available for same-day shipping"
+"4. Connectors and capacitors usually in stock"
+"5. Total should be under $10 before shipping"
+
+"ASSEMBLY REQUIREMENTS"
+"Tools: Soldering iron, solder, flux (optional)"
+"Skills: Basic through-hole soldering for connectors, optional SMD for resistors/caps"
+"Time: 1-2 hours for hand assembly"
+"Alternative: Have JLCPCB assemble SMD parts, you solder connectors"
+
+"PCB LAYOUT REQUIREMENTS"
+"Footprints needed in KiCad:"
+"- DO-41 for D1 (diode)"
+"- Radial pad for C1, C6 (electrolytic caps)"
+"- 0805 pads for SMD resistors and capacitors"
+"- 2.54mm header pads for connectors"
+"- 2×20 pad for Pico connector"
+"- Ground plane recommended (bottom layer)"
+"- Thick traces for 24V and GND rails"
+
+"COST SUMMARY"
+"Digi-Key components: $7.70 - $8.46"
+"PCB (JLCPCB 5 boards): $10.00 - $15.00"
+"Shipping Digi-Key: Varies (free over $25 with Digi-Key+)"
+"Total investment: $18-24 for complete PCB solution"
+
+"WHAT YOU'RE BUILDING"
+"A simple 2-layer PCB that acts as:"
+"1. Power distribution from 24V supply to stepper modules"
+"2. 5V regulation and filtering (buck module mounts here)"
+"3. Signal routing from Pico to stepper drivers"
+"4. Pico interface connector"
+"5. Motor connectors (can be pass-through from modules)"
+
+"NO COMPLEX COMPONENTS - just passive filtering and distribution!"

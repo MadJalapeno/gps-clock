@@ -1,0 +1,251 @@
+GPS CLOCK PCB SCHEMATIC - WITH HALL EFFECT SENSORS
+==================================================
+
+COMPLETE SYSTEM ARCHITECTURE
+
+INPUT POWER SECTION:
+    +24V Input
+       │
+       ├─ D1 (1N4007) ─────┬─── +24V_RAIL ──────────┐
+       │                   │                        │
+    [Fuse]              [C1-470µF]              [C2-100nF]
+       │                   │                        │
+      GND────────────────┴───────────────────────┴─GND
+
++24V_RAIL powers:
+  - Buck converter module (24V→5V)
+  - All 6 stepper driver modules
+
+
+5V REGULATION SECTION:
+    Buck Converter Module (pre-built)
+    Receives: +24V_RAIL, GND
+    Outputs: +5V_RAIL
+
+    +5V_RAIL filtered by:
+    ├─ C3 (100µF) - bulk
+    ├─ C4 (10µF) - mid-frequency
+    └─ C5 (100nF) - high-frequency
+
+
+HALL EFFECT SENSOR CIRCUIT (×6):
+Each sensor uses identical topology:
+
+    +5V_RAIL ────┬─────────────────────────────┐
+                 │                             │
+              [C6-100nF] (sensor VCC bypass) [R_pullup-10kΩ]
+                 │                             │
+                 ├─ U_N (A3144E) ──────┬──────┤
+                 │  Sensor IC          │      │
+              [GND]                    │   [C_debounce-10nF]
+                                       │      │
+                                       └──────┼─ To Pico GPIO
+                                              │
+                                            [GND]
+
+U_N Pin Configuration:
+  Pin 1: VCC (to +5V_RAIL)
+  Pin 2: GND (to ground plane)
+  Pin 3: OUTPUT (open-collector)
+
+Signal behavior:
+  - No magnet: OUTPUT floats HIGH (~5V via pull-up)
+  - Magnet present: OUTPUT pulled LOW (~0V)
+
+
+PICO GPIO ASSIGNMENTS FOR HOMING:
+┌──────────────────────────────────────────────────┐
+│ Pico (40-pin)                                    │
+│                                                  │
+│ Hall Sensors (Motor Homing):                     │
+│   GPIO 3 ← Stepper 5 Home (Seconds Ones)        │
+│   GPIO 5 ← Stepper 4 Home (Seconds Tens)        │
+│   GPIO 7 ← Stepper 3 Home (Minutes Ones)        │
+│   GPIO 9 ← Stepper 2 Home (Minutes Tens)        │
+│   GPIO 11 ← Stepper 1 Home (Hours Ones)         │
+│   GPIO 13 ← Stepper 0 Home (Hours Tens)         │
+│                                                  │
+│ Motor Control (STEP/DIR):                        │
+│   GPIO2 → 100Ω → 10kΩ pull-down → Stepper 5    │
+│   GPIO4 → 100Ω → 10kΩ pull-down → Stepper 4    │
+│   GPIO6 → 100Ω → 10kΩ pull-down → Stepper 3    │
+│   GPIO8 → 100Ω → 10kΩ pull-down → Stepper 2    │
+│   GPIO10 → 100Ω → 10kΩ pull-down → Stepper 1   │
+│   GPIO12 → 100Ω → 10kΩ pull-down → Stepper 0   │
+│                                                  │
+│ Display/GPS/IO:                                  │
+│   GPIO0 → GPS RX                                │
+│   GPIO1 → GPS TX                                │
+│   GPIO17 → TFT CS                               │
+│   GPIO18 → TFT SCK                              │
+│   GPIO19 → TFT MOSI                             │
+│   GPIO20 → TFT DC                               │
+│   GPIO21 → TFT RST                              │
+│   GPIO26 → Timezone Button                      │
+│   GPIO27 → 24H Button                           │
+│   3V3 → Display/Button Power                    │
+│   5V → (optional, from buck output)             │
+│   GND → Ground Plane                            │
+└──────────────────────────────────────────────────┘
+
+
+STEPPER MODULE CONNECTIONS (×6):
+Each stepper module receives:
+
+    ┌────────────────────────────────────┐
+    │ Stepper Module #N (pre-built)      │
+    │ (TMC2208 or similar)               │
+    │                                    │
+    │ +24V ──────────────────┐           │
+    │ GND ───────────────────┤─ Motor A  │
+    │ STEP signal (GPIO) ────┤─ Motor B  │
+    │ DIR signal (GPIO) ─────┤           │
+    │                        │           │
+    │ Motor Output:          │           │
+    │ A1 ────────────────────┤           │
+    │ A2 ────────────────────┤           │
+    │ B1 ────────────────────┤           │
+    │ B2 ────────────────────┘           │
+    └────────────────────────────────────┘
+
+
+COMPLETE SIGNAL FLOW:
+
+1. MOTOR HOMING (Startup):
+   Hall Sensor (GPIO3-13) ──→ Pico ──→ Firmware detects position
+   ↓
+   Firmware moves motor until hall sensor triggers
+   ↓
+   Motor stops → Position verified → Move to correct display position
+
+2. NORMAL OPERATION:
+   GPS time ──→ Pico ──→ Calculate motor positions ──→ Move steppers via STEP/DIR
+
+3. STEPPER CONTROL:
+   Pico GPIO (3.3V) ──→ 100Ω resistor ──→ 10kΩ pull-down ──→ Stepper module
+   (Signal integrity via filtering and pull-downs)
+
+
+PCB LAYOUT ZONES:
+
+Zone 1: INPUT (Left Edge)
+  - Power connector J1
+  - Fuse and diode (short, wide traces)
+  - Bulk capacitor C1 (very close to fuse)
+
+Zone 2: POWER FILTERING (Left-Center)
+  - Buck converter module connector
+  - Output filtering caps C3, C4, C5
+  - Hall sensor power supply (C6-C11 bypass caps)
+
+Zone 3: HALL SENSORS (Bottom Edge)
+  - 6 sensor connectors in a row
+  - Pull-up resistors (R1-R6) clustered nearby
+  - Debouncing caps (C12-C17) at each sensor
+  - Ground vias under each sensor
+
+Zone 4: STEPPER MODULES (Right Side)
+  - 6 stepper module connectors
+  - Direct connections to 24V rail (thick traces)
+  - Signal routing to Pico GPIO
+
+Zone 5: PICO & SIGNALS (Top)
+  - 40-pin Pico connector
+  - STEP/DIR series resistors (R7-R12)
+  - STEP/DIR pull-down resistors (R13-R18)
+  - GPS, display, button connectors
+
+Zone 6: GROUND PLANE
+  - Entire bottom layer or internal layer
+  - All GND connections via vias to plane
+  - Multiple vias under high-current paths
+
+
+POWER DISTRIBUTION:
+
++24V Rail:
+  - From fuse → all stepper modules (wide, short traces)
+  - No regulators needed (modules take 24V directly)
+
++5V Rail:
+  - From buck converter output
+  - Filtered by C3, C4, C5
+  - Powers Pico, display, GPIO logic
+  - Hall sensor VCC (through individual bypass caps C6-C11)
+
+GND:
+  - Continuous plane across entire PCB
+  - All components connected to plane via vias
+  - Return path for all signals
+
+
+CRITICAL CONNECTIONS:
+
+Hall Sensor Signals:
+  - Use dedicated GPIO pins (GPIO 3, 5, 7, 9, 11, 13)
+  - Pull-up resistors REQUIRED (open-collector output)
+  - Debouncing caps RECOMMENDED (10nF)
+  - Short traces to Pico (minimize noise pickup)
+
+Motor Control Signals:
+  - Use dedicated GPIO pins (GPIO 2, 4, 6, 8, 10, 12)
+  - Series resistors RECOMMENDED (100Ω)
+  - Pull-down resistors RECOMMENDED (10kΩ)
+  - Separate from hall sensor signals
+
+Power Integrity:
+  - Multiple vias on all power nodes
+  - Bulk cap C1 critical for transient response
+  - Sensor bypass caps C6-C11 for each sensor
+  - Ground vias every 2-3cm on 24V and 5V rails
+
+
+FIRMWARE INTEGRATION:
+
+Homing Sequence (on startup with ENABLE_MOTOR_HOMING = 1):
+  1. Set all motor directions to FORWARD
+  2. Enable all motors
+  3. For each motor:
+     - Check home sensor GPIO input
+     - If LOW (magnet detected): Move away slightly, then back to trigger
+     - If HIGH (no magnet): Start pulsing STEP signal
+     - When home sensor triggers: STOP motor
+     - Update position map: this GPIO pin = motor zero position
+  4. Once all motors homed: Move to current GPS time position
+  5. Normal operation begins
+
+Each time clock powers up:
+  - Firmware automatically homes all motors
+  - Verifies GPS has fix
+  - Displays current time
+  - Continuously updates motor positions
+
+
+TEST PROCEDURE:
+
+Before Powering Up:
+  ☐ Continuity: 24V rail (should be continuous)
+  ☐ Continuity: 5V rail (should be continuous)
+  ☐ Continuity: GND plane (everywhere)
+  ☐ Resistance: 24V to GND >10kΩ
+  ☐ Resistance: 5V to GND >10kΩ
+
+After Power Applied:
+  ☐ Measure 24V rail (should be 24V ±0.5V)
+  ☐ Measure 5V rail (should be 5.0V ±0.25V)
+  ☐ Test each hall sensor independently with magnet
+  ☐ Verify sensor OUTPUT goes 5V → 0V → 5V when magnet approaches/leaves
+  ☐ Connect Pico and test GPIO readings
+  ☐ Run firmware homing sequence
+
+
+COMPONENTS SUMMARY:
+
+Active: 6× A3144E Hall sensors, 1× Pico, 1× Buck module, 6× Stepper modules
+Passive: 1 diode, 1 fuse, 18 capacitors, 12 resistors
+Connectors: 15 total (1 power, 1 buck, 6 sensors, 6 steppers, 1 pico)
+
+Total component count: ~50 parts
+Complexity: LOW (mostly passive components)
+Cost: ~$18 with Digi-Key parts + $10 PCB
+Build time: 2-3 hours hand assembly
