@@ -3,4 +3,5 @@
 	(lib (name "ZC323200") (type "KiCad") (uri "${KIPRJMOD}/ZC323200/ZC323200.kicad_sym") (options "") (descr ""))
 	(lib (name "TMC2208_SILENTSTEPSTICK") (type "KiCad") (uri "${KIPRJMOD}/TMC2208_SILENTSTEPSTICK/TMC2208_SILENTSTEPSTICK.kicad_sym") (options "") (descr ""))
 	(lib (name "MP1584EN_Module") (type "KiCad") (uri "${KIPRJMOD}/MP1584EN/MP1584EN_Module.kicad_sym") (options "") (descr ""))
+	(lib (name "New_Library") (type "KiCad") (uri "${KIPRJMOD}/Misc/New_Library.kicad_sym") (options "") (descr ""))
 )

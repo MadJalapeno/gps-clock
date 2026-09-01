@@ -1373,6 +1373,154 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "New_Library:MP1584EN"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "MP1584EN1"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "misc:Untitled"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.amazon.com/dp/B0B779ZYN1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MP1584EN_0_1"
+				(rectangle
+					(start -6.35 6.35)
+					(end 6.35 -6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MP1584EN_1_1"
+				(pin power_out line
+					(at -8.89 -3.81 0)
+					(length 2.54)
+					(name "Vout-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -8.89 2.54 0)
+					(length 2.54)
+					(name "Vout+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 8.89 2.54 180)
+					(length 2.54)
+					(name "Vin+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 8.89 -3.81 180)
+					(length 2.54)
+					(name "Vin-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Sensor_Magnetic:A1104xLH"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2719,6 +2867,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 257.81) (xy 119.38 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18c4b14a-04b5-4b36-b2cf-d21bfbb1c228")
+	)
+	(wire
+		(pts
 			(xy 316.23 121.92) (xy 321.31 121.92)
 		)
 		(stroke
@@ -3549,6 +3707,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 20.32) (xy 63.5 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba190c00-ebe1-4b29-afa0-fc26ca0b1a2e")
+	)
+	(wire
+		(pts
 			(xy 203.2 170.18) (xy 203.2 165.1)
 		)
 		(stroke
@@ -3586,6 +3754,16 @@
 			(type default)
 		)
 		(uuid "c4cb139d-eaa7-43ba-9c94-48baa85640f5")
+	)
+	(wire
+		(pts
+			(xy 129.54 264.16) (xy 119.38 264.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6eb11fb-1a23-4f25-bf28-038eda641064")
 	)
 	(wire
 		(pts
@@ -3749,6 +3927,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 257.81) (xy 92.71 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e247dd85-6911-49f6-b0cf-3a25fd7a142f")
+	)
+	(wire
+		(pts
 			(xy 233.68 90.17) (xy 237.49 90.17)
 		)
 		(stroke
@@ -3776,6 +3964,16 @@
 			(type default)
 		)
 		(uuid "eb3d271c-6b15-4016-a44e-2648b7c99ded")
+	)
+	(wire
+		(pts
+			(xy 101.6 264.16) (xy 92.71 264.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed539982-9666-4672-a486-a0f3ddd7244a")
 	)
 	(wire
 		(pts
@@ -4017,6 +4215,16 @@
 		)
 		(uuid "38574ffc-7dec-486e-91a1-3a31b3f1f4d6")
 	)
+	(label "+24V"
+		(at 92.71 257.81 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3902e730-9426-4f25-960c-4ecdd8c4f38c")
+	)
 	(label "SECONDS_TENS_STEP"
 		(at 17.78 58.42 0)
 		(effects
@@ -4056,6 +4264,16 @@
 			(justify left bottom)
 		)
 		(uuid "3d53c9e0-51d6-4ae0-a80d-2109cd52452a")
+	)
+	(label "GND"
+		(at 129.54 264.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3edd78b1-e37e-4355-bb14-925f566242a7")
 	)
 	(label "SECONDS_ONE_DIR"
 		(at 261.62 160.02 0)
@@ -4327,6 +4545,16 @@
 		)
 		(uuid "b5190638-bd1f-49b8-ad6b-9243e0008c5a")
 	)
+	(label "+5v"
+		(at 129.54 257.81 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b5b151a6-6ece-42bb-bcdd-369d1ec7ecb0")
+	)
 	(label "SECONDS_TENS_STEP"
 		(at 114.3 162.56 0)
 		(effects
@@ -4456,6 +4684,26 @@
 			(justify left bottom)
 		)
 		(uuid "de9e92c0-46be-48ae-b5df-bc998c32a138")
+	)
+	(label "+5v"
+		(at 63.5 20.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e19ccf5d-a497-4d37-baff-03ef661aca5c")
+	)
+	(label "GND"
+		(at 92.71 264.16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e4fc480a-473e-45fe-ba87-867e88a5d4a8")
 	)
 	(label "SECONDS_ONE_DIR"
 		(at 20.32 83.82 0)
@@ -4924,6 +5172,93 @@
 			(project "Untitled"
 				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
 					(reference "U14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "New_Library:MP1584EN")
+		(at 110.49 260.35 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1d161e84-4f57-4041-90e3-a4f2ba0a5ce3")
+		(property "Reference" "MP1584EN1"
+			(at 110.49 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 110.49 260.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "misc:Untitled"
+			(at 110.49 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.amazon.com/dp/B0B779ZYN1"
+			(at 110.49 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 260.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "5ba7b550-097c-4e77-8a8b-5d1dcf23781b")
+		)
+		(pin "1"
+			(uuid "647660b0-b68c-4e53-b5b9-1ee41cd18d69")
+		)
+		(pin "3"
+			(uuid "8255b860-0d0a-4a74-9554-4c2eea5837c4")
+		)
+		(pin "2"
+			(uuid "463b88c8-7ca7-4d6a-964d-cb7e6476ef34")
+		)
+		(instances
+			(project "Untitled"
+				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
+					(reference "MP1584EN1")
 					(unit 1)
 				)
 			)

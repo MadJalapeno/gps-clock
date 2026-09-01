@@ -2,4 +2,5 @@
 	(version 7)
 	(lib (name "TMC2208_SILENTSTEPSTICK") (type "KiCad") (uri "${KIPRJMOD}/TMC2208_SILENTSTEPSTICK") (options "") (descr ""))
 	(lib (name "ZC323200") (type "KiCad") (uri "${KIPRJMOD}/ZC323200") (options "") (descr ""))
+	(lib (name "misc") (type "KiCad") (uri "${KIPRJMOD}/Misc/misc.pretty") (options "") (descr ""))
 )
