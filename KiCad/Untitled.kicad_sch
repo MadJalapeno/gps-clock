@@ -3,7 +3,7 @@
 	(generator "eeschema")
 	(generator_version "10.0")
 	(uuid "52395102-4107-4a16-b2c4-7b2786d510a6")
-	(paper "A4")
+	(paper "A3")
 	(lib_symbols
 		(symbol "MCU_Module:RaspberryPi_Pico"
 			(pin_names
@@ -2415,9 +2415,121 @@
 			(embedded_fonts no)
 		)
 	)
+	(rectangle
+		(start 260.35 12.7)
+		(end 406.4 72.39)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "2398747e-3f82-4319-b967-61aa58945a80")
+	)
+	(rectangle
+		(start 113.03 12.7)
+		(end 259.08 72.39)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "35ce510c-8267-4062-a81e-fb8129b6a33c")
+	)
+	(rectangle
+		(start 113.03 134.62)
+		(end 259.08 194.31)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "5ee71157-fb0d-4cf1-a77d-25ce401109ee")
+	)
+	(rectangle
+		(start 113.03 73.66)
+		(end 259.08 133.35)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "77c98782-a78e-494e-a871-41aa6b4f3839")
+	)
+	(rectangle
+		(start 260.35 73.66)
+		(end 406.4 133.35)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "a74f28cc-9779-4dac-ac76-9650efc804f1")
+	)
+	(rectangle
+		(start 260.35 134.62)
+		(end 406.4 194.31)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "cec324f1-2520-461d-a5cb-a703ac947e77")
+	)
+	(text "MINUTES_TENS"
+		(exclude_from_sim no)
+		(at 190.246 76.962 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0583e157-6523-40f8-9665-ff060563b3d1")
+	)
+	(text "HOURS_TENS"
+		(exclude_from_sim no)
+		(at 190.246 16.002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6efa099a-2460-4434-b32f-e425673479bf")
+	)
+	(text "SECONDS_ONE"
+		(exclude_from_sim no)
+		(at 337.566 137.922 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "73516e1c-51e7-44ab-b12c-b9e90fa308d0")
+	)
+	(text "HOURS_ONE"
+		(exclude_from_sim no)
+		(at 337.566 16.002 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "745bdf16-3157-42ff-9ffb-9e0e466adcf7")
+	)
 	(text "GPS module"
 		(exclude_from_sim no)
-		(at 19.558 104.14 0)
+		(at 19.558 242.57 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2425,29 +2537,459 @@
 		)
 		(uuid "ee7da316-3849-4161-a5fe-26eb143beac3")
 	)
-	(polyline
-		(pts
-			(xy 12.7 144.78) (xy 12.7 146.05)
+	(text "MINUTES_ONE"
+		(exclude_from_sim no)
+		(at 337.566 76.962 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "028207d0-cd94-4710-a492-2061a83319de")
+		(uuid "eef9f6b2-b70e-44cf-983b-2ae1dfc4be66")
 	)
-	(polyline
-		(pts
-			(xy 64.77 146.05) (xy 12.7 146.05)
+	(text "SECONDS_TENS"
+		(exclude_from_sim no)
+		(at 190.246 137.922 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37922c95-91ce-40f4-985e-20bb71124ec9")
+		(uuid "ef5fcd52-a736-4164-9650-ab59a8d3b4a4")
 	)
 	(wire
 		(pts
-			(xy 99.06 95.25) (xy 99.06 101.6)
+			(xy 316.23 149.86) (xy 322.58 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00381d73-e71b-4e77-9795-d7cdcb098837")
+	)
+	(wire
+		(pts
+			(xy 168.91 43.18) (xy 203.2 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0048e738-edd1-4db8-9f9b-54b24b737f06")
+	)
+	(wire
+		(pts
+			(xy 168.91 27.94) (xy 175.26 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00f10cd2-2d9e-4802-b527-a0fdbf7b0450")
+	)
+	(wire
+		(pts
+			(xy 196.85 109.22) (xy 196.85 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01431ba1-d3da-4d1f-9f12-4291535f6628")
+	)
+	(wire
+		(pts
+			(xy 223.52 39.37) (xy 223.52 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01e8434a-d7d5-416b-87db-4cea571750d8")
+	)
+	(wire
+		(pts
+			(xy 316.23 152.4) (xy 322.58 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04dea344-487d-46ec-b540-372eb0570d9b")
+	)
+	(wire
+		(pts
+			(xy 261.62 101.6) (xy 280.67 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05fae5e6-267e-4d27-b16a-6122c0d8f97a")
+	)
+	(wire
+		(pts
+			(xy 168.91 165.1) (xy 203.2 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c89cb41-f21b-4763-af1c-793e2f6c9f32")
+	)
+	(wire
+		(pts
+			(xy 196.85 48.26) (xy 196.85 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d5bedcc-c98f-4382-9ad6-1d001fe7ac72")
+	)
+	(wire
+		(pts
+			(xy 381 90.17) (xy 384.81 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f5f7f3b-ce60-4ed6-85ca-f7caf39a3126")
+	)
+	(wire
+		(pts
+			(xy 39.37 261.62) (xy 53.34 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "104e8de8-2da1-43d1-8e2d-3617974f036e")
+	)
+	(wire
+		(pts
+			(xy 349.25 167.64) (xy 349.25 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12ac4383-76f1-4382-9294-292ef551922a")
+	)
+	(wire
+		(pts
+			(xy 370.84 39.37) (xy 370.84 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12bb4e05-4b62-442f-83ed-dd3aba01c6f4")
+	)
+	(wire
+		(pts
+			(xy 381 151.13) (xy 384.81 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12bd2eea-b169-48a4-907e-e6bb22a058e5")
+	)
+	(wire
+		(pts
+			(xy 29.21 50.8) (xy 40.64 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15cb7d59-17bd-4df8-9319-47078c16ec14")
+	)
+	(wire
+		(pts
+			(xy 363.22 162.56) (xy 363.22 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "163aed9d-02a9-4b45-b983-841ab8c7d180")
+	)
+	(wire
+		(pts
+			(xy 316.23 121.92) (xy 321.31 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b27b336-077a-4ef3-aa27-a2b1d73846a2")
+	)
+	(wire
+		(pts
+			(xy 168.91 104.14) (xy 203.2 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bf7e184-ae60-45df-bd1b-b64c8783c1c9")
+	)
+	(wire
+		(pts
+			(xy 316.23 104.14) (xy 350.52 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ca4ee1d-ec7f-4022-94d1-3dd39e9b880e")
+	)
+	(wire
+		(pts
+			(xy 349.25 106.68) (xy 349.25 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e690e67-7bd1-42e9-82de-35bedb1ae455")
+	)
+	(wire
+		(pts
+			(xy 316.23 88.9) (xy 322.58 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2012df1c-3554-4b3b-adb1-276a10e23593")
+	)
+	(wire
+		(pts
+			(xy 233.68 29.21) (xy 237.49 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24148a11-682e-47fd-aded-bea8d2c26671")
+	)
+	(wire
+		(pts
+			(xy 316.23 109.22) (xy 344.17 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "278a1c8c-61c8-48d6-a3f7-4c55d14e2697")
+	)
+	(wire
+		(pts
+			(xy 20.32 55.88) (xy 40.64 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a77fca4-b4e2-4184-91e8-49546dca077b")
+	)
+	(wire
+		(pts
+			(xy 196.85 170.18) (xy 196.85 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ade746a-5c38-4a3f-9dfe-c44ba4775d1e")
+	)
+	(wire
+		(pts
+			(xy 350.52 170.18) (xy 358.14 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bdb5d38-183e-412f-990d-9367712e0d1e")
+	)
+	(wire
+		(pts
+			(xy 261.62 160.02) (xy 280.67 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2da518fd-34de-436f-9304-9cf404f01b6e")
+	)
+	(wire
+		(pts
+			(xy 114.3 40.64) (xy 133.35 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2dcc20aa-11a6-4969-b490-a925807b0cbf")
+	)
+	(wire
+		(pts
+			(xy 344.17 48.26) (xy 344.17 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e7d1284-ca05-4cc1-82f9-b564e5515725")
+	)
+	(wire
+		(pts
+			(xy 168.91 162.56) (xy 215.9 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f82b213-e477-46c6-b3cd-16e107731a48")
+	)
+	(wire
+		(pts
+			(xy 316.23 45.72) (xy 349.25 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30749b05-e873-44a9-aa1e-b442863cb891")
+	)
+	(wire
+		(pts
+			(xy 201.93 175.26) (xy 205.74 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "320f323b-6467-450e-90b4-c2ffeed04089")
+	)
+	(wire
+		(pts
+			(xy 168.91 45.72) (xy 201.93 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32421287-b15c-4ff7-8c47-eee96b7c8cb5")
+	)
+	(wire
+		(pts
+			(xy 168.91 60.96) (xy 173.99 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33577062-a87b-4c8b-967a-6625ebd16127")
+	)
+	(wire
+		(pts
+			(xy 223.52 100.33) (xy 223.52 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3687e3c6-eb6a-4d7b-bcb5-c37cc5a98392")
+	)
+	(wire
+		(pts
+			(xy 344.17 119.38) (xy 353.06 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "368b2a4d-e87e-4a4f-91de-a45c0e5d5c2d")
+	)
+	(wire
+		(pts
+			(xy 201.93 53.34) (xy 205.74 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "374445cc-5bc7-407e-bff4-e640a553c7a4")
+	)
+	(wire
+		(pts
+			(xy 316.23 106.68) (xy 349.25 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "380de0c8-e3ca-42cd-b532-75612817a235")
+	)
+	(wire
+		(pts
+			(xy 168.91 182.88) (xy 173.99 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3951d7a0-d9af-4eca-959d-5332257d3fc7")
+	)
+	(wire
+		(pts
+			(xy 20.32 83.82) (xy 40.64 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "396617d6-deed-4053-9bc3-bf9b45784237")
+	)
+	(wire
+		(pts
+			(xy 363.22 101.6) (xy 363.22 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a9a4dcc-0881-436e-8c21-edb05d3b1e53")
+	)
+	(wire
+		(pts
+			(xy 17.78 60.96) (xy 40.64 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d439be2-701a-4d1a-8401-4483228b3338")
+	)
+	(wire
+		(pts
+			(xy 201.93 114.3) (xy 205.74 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "424ac9d3-6438-4dec-ac79-6301bb4d7217")
+	)
+	(wire
+		(pts
+			(xy 63.5 99.06) (xy 63.5 105.41)
 		)
 		(stroke
 			(width 0)
@@ -2455,9 +2997,59 @@
 		)
 		(uuid "42bc5b00-1ae3-46fd-aba4-4d2155c58133")
 	)
+	(wire
+		(pts
+			(xy 201.93 45.72) (xy 201.93 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "448efc0b-742a-4a94-99fe-04b3d1d42901")
+	)
+	(wire
+		(pts
+			(xy 261.62 40.64) (xy 280.67 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45f523c7-a484-4681-9d5d-562b718d3fd0")
+	)
+	(wire
+		(pts
+			(xy 168.91 48.26) (xy 196.85 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46518e36-0f90-477a-9a7c-5eae75be6ce9")
+	)
+	(wire
+		(pts
+			(xy 316.23 91.44) (xy 322.58 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b2886f2-d411-40c4-a1fc-6786d4db5295")
+	)
+	(wire
+		(pts
+			(xy 261.62 99.06) (xy 280.67 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b607d0c-8a3a-4d91-9401-4697b7ad6041")
+	)
 	(polyline
 		(pts
-			(xy 12.7 101.6) (xy 64.77 101.6)
+			(xy 12.7 240.03) (xy 64.77 240.03)
 		)
 		(stroke
 			(width 0)
@@ -2467,7 +3059,67 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 115.57) (xy 53.34 115.57)
+			(xy 350.52 48.26) (xy 358.14 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4cae9496-3a2f-4c75-b87b-ee483b0739ea")
+	)
+	(wire
+		(pts
+			(xy 350.52 48.26) (xy 350.52 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d5cc8fa-72df-4e1c-a55b-bf0b5f126dca")
+	)
+	(wire
+		(pts
+			(xy 316.23 182.88) (xy 321.31 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "517762b2-6ffe-4979-9022-6e77b7c741a8")
+	)
+	(wire
+		(pts
+			(xy 261.62 38.1) (xy 280.67 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57689fc0-2d72-4c0f-91f9-3db2fe8e4c31")
+	)
+	(wire
+		(pts
+			(xy 363.22 40.64) (xy 363.22 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d91d62e-e302-4040-b33d-d328304dc0e8")
+	)
+	(wire
+		(pts
+			(xy 203.2 109.22) (xy 203.2 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6524f647-4353-422d-b4d3-257b26a8b895")
+	)
+	(wire
+		(pts
+			(xy 39.37 254) (xy 53.34 254)
 		)
 		(stroke
 			(width 0)
@@ -2477,7 +3129,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 16.51) (xy 104.14 21.59)
+			(xy 68.58 20.32) (xy 68.58 25.4)
 		)
 		(stroke
 			(width 0)
@@ -2485,9 +3137,309 @@
 		)
 		(uuid "6d9a110d-ebf3-4bb8-b4b1-fd8e49e00f70")
 	)
+	(wire
+		(pts
+			(xy 203.2 48.26) (xy 210.82 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f31878a-6253-4dfb-8057-dce986e8f7b4")
+	)
+	(wire
+		(pts
+			(xy 114.3 160.02) (xy 133.35 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "718d9329-0628-45ef-bb23-25f47e77c77f")
+	)
+	(wire
+		(pts
+			(xy 349.25 45.72) (xy 349.25 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "720854e0-01c7-4e1a-8288-767cae03aa16")
+	)
+	(wire
+		(pts
+			(xy 223.52 16.51) (xy 223.52 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73f0c29e-d874-431a-8358-9a67619cfd64")
+	)
+	(wire
+		(pts
+			(xy 316.23 30.48) (xy 322.58 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7633616e-9880-45de-a774-7f877631eae6")
+	)
+	(wire
+		(pts
+			(xy 344.17 58.42) (xy 353.06 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77522305-a3a4-4c35-bad5-6cfad224b3f1")
+	)
+	(wire
+		(pts
+			(xy 370.84 16.51) (xy 370.84 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79ff97d2-11ed-4533-ba02-3ed1e7e3461a")
+	)
+	(wire
+		(pts
+			(xy 168.91 121.92) (xy 173.99 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a5b3043-ec2f-4979-8935-fc3d81c392d3")
+	)
+	(wire
+		(pts
+			(xy 168.91 30.48) (xy 175.26 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b8be918-1a4d-4665-968b-1bbdb147256f")
+	)
+	(wire
+		(pts
+			(xy 316.23 170.18) (xy 344.17 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e3c460e-968d-439f-910e-49f534cde302")
+	)
+	(wire
+		(pts
+			(xy 196.85 58.42) (xy 205.74 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8091e89d-0cfc-4d1a-a21d-c21bed255174")
+	)
+	(wire
+		(pts
+			(xy 19.05 86.36) (xy 40.64 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81cbda1e-1a5a-4d42-8ebb-7b3ce5dc0fd1")
+	)
+	(wire
+		(pts
+			(xy 316.23 27.94) (xy 322.58 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "874180f8-0bfb-4c66-90d1-f49b3f176ed1")
+	)
+	(wire
+		(pts
+			(xy 350.52 170.18) (xy 350.52 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "885828c8-b8e0-4686-b54d-7bec5c1a11f5")
+	)
+	(wire
+		(pts
+			(xy 168.91 109.22) (xy 196.85 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b6dc93e-8af0-4db1-b95a-fe5004a0f9e1")
+	)
+	(wire
+		(pts
+			(xy 316.23 40.64) (xy 363.22 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b9e4e5a-806e-4023-a9d4-ca7614557422")
+	)
+	(wire
+		(pts
+			(xy 168.91 149.86) (xy 175.26 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "912822e7-ddc7-4c5c-bfff-6d4d7de9cd2d")
+	)
+	(wire
+		(pts
+			(xy 215.9 101.6) (xy 215.9 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9337e187-ad8c-4190-8659-622ba7d092b9")
+	)
+	(wire
+		(pts
+			(xy 316.23 43.18) (xy 350.52 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "939781f6-868f-431f-ae09-7f5a6216a8ec")
+	)
+	(wire
+		(pts
+			(xy 114.3 162.56) (xy 133.35 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93a20ee2-9bba-4c40-9cf8-bdc0456d56c9")
+	)
+	(wire
+		(pts
+			(xy 370.84 77.47) (xy 370.84 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95baa159-adaa-43f4-9de4-d8927314e0b0")
+	)
+	(wire
+		(pts
+			(xy 168.91 167.64) (xy 201.93 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97300351-57df-4486-97d8-8fb38f53d81e")
+	)
+	(wire
+		(pts
+			(xy 316.23 101.6) (xy 363.22 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98c1e338-bcdc-4b33-ba86-02d62b797036")
+	)
+	(wire
+		(pts
+			(xy 223.52 161.29) (xy 223.52 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "993a372e-0baf-48a6-a31e-8f9f1f84d836")
+	)
+	(wire
+		(pts
+			(xy 168.91 170.18) (xy 196.85 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "999250f6-fc7e-4711-b88f-00cdfcfd8c44")
+	)
+	(wire
+		(pts
+			(xy 381 29.21) (xy 384.81 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cba291d-86d1-42cb-a74d-8a6d10249623")
+	)
+	(wire
+		(pts
+			(xy 39.37 259.08) (xy 53.34 259.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f39244e-fc4e-4565-b0a8-016f6156bc72")
+	)
+	(wire
+		(pts
+			(xy 370.84 100.33) (xy 370.84 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f758ad6-0ffd-4380-b063-293e600f6888")
+	)
+	(wire
+		(pts
+			(xy 203.2 170.18) (xy 210.82 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ff726be-1fc0-4faf-84cd-732232e3d9a7")
+	)
+	(wire
+		(pts
+			(xy 261.62 162.56) (xy 280.67 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0b08abc-d4a8-475c-863e-2606dbb8be9f")
+	)
 	(polyline
 		(pts
-			(xy 64.77 101.6) (xy 64.77 146.05)
+			(xy 64.77 240.03) (xy 64.77 284.48)
 		)
 		(stroke
 			(width 0)
@@ -2497,7 +3449,147 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 128.27) (xy 53.34 128.27)
+			(xy 349.25 53.34) (xy 353.06 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2757d5d-a5fc-427a-b26b-7d24835d6644")
+	)
+	(wire
+		(pts
+			(xy 316.23 165.1) (xy 350.52 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a35b6e9e-9361-4841-a511-338b4f2f6c4d")
+	)
+	(wire
+		(pts
+			(xy 223.52 138.43) (xy 223.52 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4b519b7-4f4c-42bf-ab57-39497016a17c")
+	)
+	(wire
+		(pts
+			(xy 168.91 91.44) (xy 175.26 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7d4e695-56aa-48f6-b9b7-3d122dd9dd2a")
+	)
+	(wire
+		(pts
+			(xy 316.23 167.64) (xy 349.25 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0eea0fd-053d-4d3e-9c97-40509f82197b")
+	)
+	(wire
+		(pts
+			(xy 350.52 109.22) (xy 350.52 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b207b7e6-9c49-4376-8609-5be844313ca9")
+	)
+	(wire
+		(pts
+			(xy 223.52 77.47) (xy 223.52 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3471fd3-5d92-4586-957e-aad9d4da5609")
+	)
+	(wire
+		(pts
+			(xy 344.17 109.22) (xy 344.17 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4783f08-519e-46d5-82ec-05496c4f5832")
+	)
+	(wire
+		(pts
+			(xy 350.52 109.22) (xy 358.14 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b734dc88-794f-41d3-b30d-9b83d501c52c")
+	)
+	(wire
+		(pts
+			(xy 114.3 99.06) (xy 133.35 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b939fc05-6868-48b5-8167-485268ff5921")
+	)
+	(wire
+		(pts
+			(xy 203.2 170.18) (xy 203.2 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c01d7e9d-037d-4f29-9939-86d2d1b591cb")
+	)
+	(wire
+		(pts
+			(xy 114.3 101.6) (xy 133.35 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c318cde7-d112-445a-a19a-613f36dadadb")
+	)
+	(wire
+		(pts
+			(xy 203.2 48.26) (xy 203.2 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c46e3e4c-a87c-4f72-bbdb-0134e0688baa")
+	)
+	(wire
+		(pts
+			(xy 215.9 162.56) (xy 215.9 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4cb139d-eaa7-43ba-9c94-48baa85640f5")
+	)
+	(wire
+		(pts
+			(xy 39.37 266.7) (xy 53.34 266.7)
 		)
 		(stroke
 			(width 0)
@@ -2505,8 +3597,288 @@
 		)
 		(uuid "c7b9c425-f4c0-42da-8512-7109cfc3516b")
 	)
+	(wire
+		(pts
+			(xy 20.32 53.34) (xy 40.64 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8c6b565-b66a-48c0-bf59-937b6df33662")
+	)
+	(wire
+		(pts
+			(xy 168.91 106.68) (xy 201.93 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca4f0d44-0a7e-4b33-ab33-6c31b5e05ef2")
+	)
+	(wire
+		(pts
+			(xy 344.17 170.18) (xy 344.17 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cacd51ef-1daf-456f-bd0a-112dcbeb14ce")
+	)
+	(wire
+		(pts
+			(xy 17.78 58.42) (xy 40.64 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbf723aa-ab70-474f-90a0-41deefd55533")
+	)
+	(wire
+		(pts
+			(xy 168.91 40.64) (xy 215.9 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cca96789-955d-4f49-b7eb-4cb4d9c756df")
+	)
+	(wire
+		(pts
+			(xy 201.93 167.64) (xy 201.93 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4b8e14b-c835-4a50-be19-e1c2b502a1c2")
+	)
+	(wire
+		(pts
+			(xy 233.68 151.13) (xy 237.49 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d541c84f-9ea3-4259-bf85-1910c3d1c486")
+	)
+	(wire
+		(pts
+			(xy 203.2 109.22) (xy 210.82 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d83aa019-e22e-4c3d-9c83-86021e41cfb8")
+	)
+	(wire
+		(pts
+			(xy 349.25 114.3) (xy 353.06 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd301833-2802-4361-9a5f-97647d6d4522")
+	)
+	(wire
+		(pts
+			(xy 349.25 175.26) (xy 353.06 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "debfeb60-46d9-4a29-a67e-9098cc22b233")
+	)
+	(wire
+		(pts
+			(xy 29.21 48.26) (xy 40.64 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "def32b0f-152b-4789-841c-b192a8257fe9")
+	)
+	(wire
+		(pts
+			(xy 114.3 38.1) (xy 133.35 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df91be2e-7e1a-4cf8-b0c2-d964fb2c94ec")
+	)
+	(wire
+		(pts
+			(xy 370.84 161.29) (xy 370.84 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df93e154-1dd0-4fce-92e3-0357d6cb5687")
+	)
+	(wire
+		(pts
+			(xy 370.84 138.43) (xy 370.84 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1382883-b6de-4a41-bc42-a36ee9249f58")
+	)
+	(wire
+		(pts
+			(xy 316.23 48.26) (xy 344.17 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1f2dc87-dc36-4943-8e9e-d5af085fac10")
+	)
+	(wire
+		(pts
+			(xy 233.68 90.17) (xy 237.49 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e29d78a4-9864-48da-ad78-476b0559c2a9")
+	)
+	(wire
+		(pts
+			(xy 168.91 88.9) (xy 175.26 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea2c36ea-6b33-45b3-bdd2-c31cd8eb1405")
+	)
+	(wire
+		(pts
+			(xy 316.23 162.56) (xy 363.22 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb3d271c-6b15-4016-a44e-2648b7c99ded")
+	)
+	(wire
+		(pts
+			(xy 316.23 60.96) (xy 321.31 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f20fab65-b93a-4d76-ad85-889d096c414a")
+	)
+	(wire
+		(pts
+			(xy 215.9 40.64) (xy 215.9 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3f038d3-7aa5-45fe-9c32-5e80d3111f31")
+	)
+	(wire
+		(pts
+			(xy 168.91 152.4) (xy 175.26 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f44b2d13-1994-457d-a3e1-74ca179a7a95")
+	)
+	(wire
+		(pts
+			(xy 168.91 101.6) (xy 215.9 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5c4076a-d173-4c71-a7c5-7f61fda88b08")
+	)
+	(wire
+		(pts
+			(xy 201.93 106.68) (xy 201.93 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f604910c-ac14-465a-9251-4dec782e7da3")
+	)
+	(wire
+		(pts
+			(xy 196.85 119.38) (xy 205.74 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7d465b-4b0c-4155-aca3-47b564f4eba6")
+	)
+	(wire
+		(pts
+			(xy 196.85 180.34) (xy 205.74 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd11496f-76d2-436f-a6b0-615572c60bb3")
+	)
+	(wire
+		(pts
+			(xy 344.17 180.34) (xy 353.06 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd8ee849-bccf-46d6-b022-a91f6b864d04")
+	)
 	(label "GND"
-		(at 53.34 128.27 0)
+		(at 173.99 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "035a0129-1308-48c0-bf67-8f4510141687")
+	)
+	(label "GND"
+		(at 370.84 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "07e78816-6ef4-4dd0-8320-516d14048f81")
+	)
+	(label "GND"
+		(at 53.34 266.7 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2515,8 +3887,48 @@
 		)
 		(uuid "07eaadb5-a144-448f-88a6-09c0dfbe9c03")
 	)
+	(label "GND"
+		(at 321.31 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "13838743-9c04-4919-b4e3-2465669e1829")
+	)
+	(label "+24V"
+		(at 175.26 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "154bc3fa-92bb-4a1a-947a-7acc989fec9e")
+	)
+	(label "MINUTES_TENS_HOME"
+		(at 237.49 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "16ec9478-4c30-4a00-8215-0a4389644337")
+	)
 	(label "+3.3v"
-		(at 104.14 16.51 0)
+		(at 370.84 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1781718b-a44b-449b-b553-204616b7defa")
+	)
+	(label "+3.3v"
+		(at 68.58 20.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2525,8 +3937,78 @@
 		)
 		(uuid "1dad6a5e-f5e2-4924-8322-7a5c20c835cd")
 	)
+	(label "GND"
+		(at 223.52 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "24602da9-eab8-4f7a-8e25-f9609e75a543")
+	)
+	(label "+3.3v"
+		(at 223.52 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2d16710e-0967-4811-8fe5-8596886be939")
+	)
+	(label "+3.3v"
+		(at 223.52 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2fd6be81-e696-4378-a1f6-e4961cae0890")
+	)
+	(label "MINUTES_ONE_STEP"
+		(at 261.62 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3375bf3f-95bb-4403-b1eb-d695a81f2309")
+	)
+	(label "+3.3v"
+		(at 175.26 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "36dbaaea-7f56-471f-9570-927def34dfaa")
+	)
+	(label "GND"
+		(at 370.84 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "373140c9-e1ec-404d-83d1-e7f6c9d568f4")
+	)
+	(label "GND"
+		(at 321.31 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "38389a17-8cd0-4ecc-be76-f2b7b5a208af")
+	)
 	(label ""
-		(at 104.14 21.59 0)
+		(at 68.58 25.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2535,8 +4017,128 @@
 		)
 		(uuid "38574ffc-7dec-486e-91a1-3a31b3f1f4d6")
 	)
+	(label "SECONDS_TENS_STEP"
+		(at 17.78 58.42 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "39b96663-c2a5-418b-bd21-34c1ae5ff9bd")
+	)
+	(label "+3.3v"
+		(at 175.26 27.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3b6f25e3-f198-4c7f-81c9-46c5c082003a")
+	)
+	(label "MINUTES_ONE_HOME"
+		(at 384.81 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3cc238f3-3381-42b0-bcda-4dfaad933cb5")
+	)
+	(label "SECONDS_ONE_STEP"
+		(at 261.62 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3d53c9e0-51d6-4ae0-a80d-2109cd52452a")
+	)
+	(label "SECONDS_ONE_DIR"
+		(at 261.62 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "50e5db43-4bb5-4133-bb3f-4449d42e792c")
+	)
 	(label "GND"
-		(at 99.06 101.6 0)
+		(at 223.52 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51358d25-21b8-4948-bdb4-c0733a40930d")
+	)
+	(label "+3.3v"
+		(at 175.26 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "51c006c8-25ad-4811-a860-a41d9c5c8b7b")
+	)
+	(label "MINUTES_TENS_STEP"
+		(at 114.3 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "53c4d5fc-4e09-41fd-b5aa-2e2f6a250a18")
+	)
+	(label "SECONDS_ONE_HOME"
+		(at 384.81 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5d4278f0-6537-4111-8bb2-2e1e6c4484d1")
+	)
+	(label "HOURS_ONE_STEP"
+		(at 261.62 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5e5938fd-25f7-44da-99fe-d8e3467c0706")
+	)
+	(label "+24V"
+		(at 175.26 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6122662b-d475-45c8-bbae-b20f3dc0b0ae")
+	)
+	(label "+24V"
+		(at 175.26 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "627100fe-ed93-4c27-aba6-52e0fd8c5b27")
+	)
+	(label "GND"
+		(at 63.5 105.41 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2545,8 +4147,298 @@
 		)
 		(uuid "6816986d-dbe3-4bc6-a464-59c63484480c")
 	)
+	(label "MINUTES_ONE_DIR"
+		(at 261.62 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6c0cc699-3019-4739-ac00-6b75772196f4")
+	)
+	(label "SECONDS_TENS_HOME"
+		(at 17.78 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "71b27ea9-18d4-40e4-b9da-6f6ff779113d")
+	)
+	(label "MINUTES_ONE_HOME"
+		(at 19.05 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7409bbd3-236a-4813-8f2e-1122fcc804f5")
+	)
+	(label "GND"
+		(at 173.99 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "78e95305-36c6-46e7-921c-bf27a02956c6")
+	)
+	(label "GPS - RX"
+		(at 29.21 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "856ee58e-d1e4-45f1-bb99-908158260cfa")
+	)
+	(label "HOURS_TENS_DIR"
+		(at 114.3 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "93f33923-fc78-4c4c-8730-ca746b3eeed2")
+	)
+	(label "GND"
+		(at 370.84 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "977bcb51-d05b-4683-b24b-e1dcede087e1")
+	)
+	(label "MINUTES_ONE_DIR"
+		(at 21.59 105.41 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9891d12d-a686-42e9-9249-ae305d1863b2")
+	)
 	(label "+3.3v"
-		(at 53.34 115.57 0)
+		(at 322.58 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9b061e7f-8a41-4b85-81dc-552d16dc5140")
+	)
+	(label "GPS - RX"
+		(at 53.34 261.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9d87554b-81bb-4c3e-b3a8-8fe6374ff32e")
+	)
+	(label "HOURS_TENS_HOME"
+		(at 237.49 29.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9dbfd98b-cf3a-4768-ac70-097a8396a660")
+	)
+	(label "HOURS_ONE_DIR"
+		(at 261.62 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a056050e-31a9-4e94-ae8d-84f8f4b05e15")
+	)
+	(label "SECONDS_TENS_HOME"
+		(at 237.49 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a3055429-d01f-417c-a9ff-e774786c3995")
+	)
+	(label "+24V"
+		(at 322.58 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a6c95fb2-9145-413e-bd8c-ae88124631d9")
+	)
+	(label "HOURS_ONE_HOME"
+		(at 384.81 29.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ab566389-ed29-489a-8747-a870c6342a3b")
+	)
+	(label "+3.3v"
+		(at 322.58 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ab8ea0f0-22a2-4a04-bc95-8cd84f316123")
+	)
+	(label "+3.3v"
+		(at 370.84 16.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b1d96b3c-7e90-4d5d-bc33-6474a40a6cd4")
+	)
+	(label "SECONDS_TENS_DIR"
+		(at 19.05 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b5190638-bd1f-49b8-ad6b-9243e0008c5a")
+	)
+	(label "SECONDS_TENS_STEP"
+		(at 114.3 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b91f8518-3595-4624-ba42-b2c8b18ec92b")
+	)
+	(label "GND"
+		(at 223.52 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bca542eb-1d01-4317-b730-fd41d1de2071")
+	)
+	(label "GPS - TX"
+		(at 29.21 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "be5deb85-fe6d-4e68-b36f-097debc56110")
+	)
+	(label "+24V"
+		(at 322.58 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bebe1541-2f79-4d8e-86fe-017a87a75b7a")
+	)
+	(label "GND"
+		(at 321.31 182.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf24344c-f9db-477a-b447-324ef7683e7c")
+	)
+	(label "SECONDS_ONE_HOME"
+		(at 20.32 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c4c1b7c3-696c-4cba-b540-7845b5b14b7f")
+	)
+	(label "HOURS_TENS_STEP"
+		(at 114.3 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cbad2545-ddcf-4a8d-bb64-f5bb5bf625de")
+	)
+	(label "+24V"
+		(at 322.58 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cceef47b-c54c-4fc9-8314-f7323d24593a")
+	)
+	(label "SECONDS_TENS_DIR"
+		(at 114.3 160.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce1b53a3-2bab-47e0-828a-14a293855dc0")
+	)
+	(label "SECONDS_ONE_STEP"
+		(at 20.32 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d3db5c29-0178-4e59-bf7d-05a731921f86")
+	)
+	(label "MINUTES_TENS_DIR"
+		(at 114.3 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5248ace-c534-4b97-b1bc-8b2be6448844")
+	)
+	(label "+3.3v"
+		(at 53.34 254 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2555,97 +4447,69 @@
 		)
 		(uuid "da1ecdcd-b551-4a5c-a94e-fe74306ff289")
 	)
-	(symbol
-		(lib_id "Motor:Stepper_Motor_bipolar")
-		(at 264.16 124.46 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "01773dea-d371-4024-bae6-ac32abdde377")
-		(property "Reference" "M5"
-			(at 269.24 122.339 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+	(label "+3.3v"
+		(at 370.84 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Value" "Stepper_Motor_bipolar"
-			(at 269.24 124.879 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
+		(uuid "de9e92c0-46be-48ae-b5df-bc998c32a138")
+	)
+	(label "SECONDS_ONE_DIR"
+		(at 20.32 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
-			(at 264.414 124.714 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+		(uuid "eb08f639-926b-4ef1-8746-c92f7dd0d094")
+	)
+	(label "GND"
+		(at 173.99 182.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 264.414 124.714 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+		(uuid "f260dbfe-d393-4ff5-8572-6ee9e2ae57c0")
+	)
+	(label "+3.3v"
+		(at 322.58 27.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(property "Description" "4-wire bipolar stepper motor"
-			(at 264.16 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+		(uuid "f288a01e-147f-4537-8a21-1a40dad7f787")
+	)
+	(label "GPS - TX"
+		(at 53.34 259.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
-		(pin "1"
-			(uuid "5335a25e-5d60-42fd-97fd-b7ce3cc0e850")
-		)
-		(pin "2"
-			(uuid "a7a8ae33-c46c-44e8-8bf9-ebb03e9e14ac")
-		)
-		(pin "3"
-			(uuid "0c5593fb-7c67-4fbe-9676-86dd829846de")
-		)
-		(pin "4"
-			(uuid "34c32516-3908-42a3-8d94-6ef9856d4127")
-		)
-		(instances
-			(project "Untitled"
-				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "M5")
-					(unit 1)
-				)
+		(uuid "f3157a07-2e33-4358-b971-b5663736feed")
+	)
+	(label "+3.3v"
+		(at 223.52 16.51 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left bottom)
 		)
+		(uuid "f600b97d-6d89-4857-ba4c-92fa1b6e8001")
 	)
 	(symbol
 		(lib_id "MCU_Module:RaspberryPi_Pico")
-		(at 99.06 59.69 0)
+		(at 63.5 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2656,7 +4520,7 @@
 		(fields_autoplaced yes)
 		(uuid "0d094619-1b69-4753-bd6d-299083871fbf")
 		(property "Reference" "A1"
-			(at 101.2033 93.98 0)
+			(at 65.6433 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2667,7 +4531,7 @@
 			)
 		)
 		(property "Value" "RaspberryPi_Pico"
-			(at 101.2033 96.52 0)
+			(at 65.6433 100.33 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2678,7 +4542,7 @@
 			)
 		)
 		(property "Footprint" "Module:RaspberryPi_Pico_Common_Unspecified"
-			(at 99.06 106.68 0)
+			(at 63.5 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2689,7 +4553,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf"
-			(at 99.06 109.22 0)
+			(at 63.5 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2700,7 +4564,7 @@
 			)
 		)
 		(property "Description" "Versatile and inexpensive microcontroller module powered by RP2040 dual-core Arm Cortex-M0+ processor up to 133 MHz, 264kB SRAM, 2MB QSPI flash; also supports Raspberry Pi Pico 2"
-			(at 99.06 111.76 0)
+			(at 63.5 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2841,7 +4705,7 @@
 	)
 	(symbol
 		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
-		(at 170.18 81.28 0)
+		(at 151.13 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2850,9 +4714,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "252961ad-437c-466a-a18c-ff92b77ac047")
-		(property "Reference" "U12"
-			(at 170.18 58.42 0)
+		(uuid "0e1df98f-5d0d-49a8-9f3e-3e431860d5d7")
+		(property "Reference" "U14"
+			(at 151.13 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2862,7 +4726,7 @@
 			)
 		)
 		(property "Value" "TMC2208_SILENTSTEPSTICK"
-			(at 170.18 60.96 0)
+			(at 151.13 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2872,7 +4736,7 @@
 			)
 		)
 		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2884,7 +4748,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2895,7 +4759,7 @@
 			)
 		)
 		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2907,7 +4771,7 @@
 			)
 		)
 		(property "MF" "Trinamic Motion"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2919,7 +4783,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2931,7 +4795,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2943,7 +4807,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2955,7 +4819,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2967,7 +4831,7 @@
 			)
 		)
 		(property "MP" "TMC2208 SILENTSTEPSTICK"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2979,7 +4843,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2991,7 +4855,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Trinamic Motion"
-			(at 170.18 81.28 0)
+			(at 151.13 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3003,63 +4867,63 @@
 			)
 		)
 		(pin "JP1_1"
-			(uuid "b1e8a501-9bb7-4938-8142-5e21238b8b39")
+			(uuid "06c62fd3-fd21-4aa8-9eea-54da46f139da")
 		)
 		(pin "JP1_2"
-			(uuid "2edc19a9-bb0f-4266-8319-e13edc328e90")
+			(uuid "d5c214ca-aad8-49f6-8422-54c2f511bb3e")
 		)
 		(pin "JP1_4"
-			(uuid "87d42f6f-0f90-42da-aa15-90ccefefc3dc")
+			(uuid "77f6e703-bcd5-44fc-bad3-7daa155f18c9")
 		)
 		(pin "JP1_5"
-			(uuid "747924c7-980d-4ae2-bca1-55bb0f8ab29e")
+			(uuid "2f84cca3-3680-407e-b8a3-ccc44baba677")
 		)
 		(pin "JP1_6"
-			(uuid "9d5c53c7-9baa-4f93-a780-5ef297213afc")
+			(uuid "720b0210-aa3f-4422-9fad-7d4c9eb54b6e")
 		)
 		(pin "VREF"
-			(uuid "ce709f17-c77c-4b65-8d85-4d7eb80fa106")
+			(uuid "758a2440-f20c-4e14-ac3f-0e808a57437b")
 		)
 		(pin "JP3_2"
-			(uuid "4c7338a1-6715-48de-9da0-a14d1cc08542")
+			(uuid "ee8a38ca-6d66-4a5d-9783-a2c1b51a8ba2")
 		)
 		(pin "JP3_1"
-			(uuid "b1c2fb9a-c752-4e84-8274-d8020c95ba1a")
+			(uuid "bec9701b-77a5-468e-a149-354917527a16")
 		)
 		(pin "JP2_8"
-			(uuid "bf94d809-bc98-47da-972d-874a97c3c0dc")
+			(uuid "e7be09e4-e437-4852-a709-756cc3cb17db")
 		)
 		(pin "JP2_7"
-			(uuid "43380398-7a29-4605-b03f-5e48bde1004a")
+			(uuid "1bd660e9-f94b-4b01-b334-21f25a845288")
 		)
 		(pin "JP2_6"
-			(uuid "d80e70bc-33c9-4b08-9f79-f62a36582254")
+			(uuid "a2e80200-9285-4166-8096-c0d09c33b294")
 		)
 		(pin "JP2_5"
-			(uuid "cb290bfc-d0b8-4801-b928-ba551da632cc")
+			(uuid "7bc6293c-68c4-41ad-8b60-767ac775c01b")
 		)
 		(pin "JP2_3"
-			(uuid "95ee2842-57d8-4ed1-91c4-50a175b95991")
+			(uuid "2668dbdd-11d2-4ff0-b848-86043ffcb4e3")
 		)
 		(pin "JP2_4"
-			(uuid "4ad0b14f-d10f-4b37-abe8-b5598d094ca5")
+			(uuid "4c8447d1-23d3-4986-885b-9ee7486ddd67")
 		)
 		(pin "JP2_1"
-			(uuid "06020ef9-3470-4bf2-920e-eba78c7e6576")
+			(uuid "f65456aa-4f2f-48ca-ad80-1d624949c805")
 		)
 		(pin "JP2_2"
-			(uuid "a25be4db-1045-4e26-9954-cc3426a0831b")
+			(uuid "ee93f1ce-77a9-45be-b2c5-0c07c2b49fb5")
 		)
 		(pin "JP1_7"
-			(uuid "c2725428-e39a-42c1-ad2f-ca19344a079b")
+			(uuid "32488285-41a5-4591-a4aa-0a94a7ce129e")
 		)
 		(pin "JP1_8"
-			(uuid "0ae36f79-b448-4ad9-929a-eec01fc78cba")
+			(uuid "6dd063c7-e490-4a9e-8537-fff7e71b9671")
 		)
 		(instances
 			(project "Untitled"
 				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U12")
+					(reference "U14")
 					(unit 1)
 				)
 			)
@@ -3067,7 +4931,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Magnetic:A1104xLH")
-		(at 118.11 180.34 0)
+		(at 226.06 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3076,9 +4940,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "30b2d970-881b-4937-82dd-4d9ded77283d")
-		(property "Reference" "U10"
-			(at 111.76 179.0699 0)
+		(uuid "1ecb9d19-02b8-47ea-b69e-ad269325f1a7")
+		(property "Reference" "U3"
+			(at 219.71 88.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3089,7 +4953,7 @@
 			)
 		)
 		(property "Value" "A1104xLH"
-			(at 111.76 181.6099 0)
+			(at 219.71 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3100,7 +4964,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
-			(at 118.11 197.612 0)
+			(at 226.06 107.442 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3112,7 +4976,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
-			(at 118.11 193.04 0)
+			(at 226.06 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3123,7 +4987,7 @@
 			)
 		)
 		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
-			(at 118.11 195.326 0)
+			(at 226.06 105.156 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3133,27 +4997,27 @@
 				)
 			)
 		)
-		(pin "2"
-			(uuid "70ea4269-63c8-41bd-817e-f8662055d10e")
-		)
 		(pin "1"
-			(uuid "66fee3a2-e317-4850-8619-3548d4ae916a")
+			(uuid "db22f4a9-a9c1-4967-b65d-1a44373f03f0")
+		)
+		(pin "2"
+			(uuid "9cc273ad-40da-40ea-b0df-b3ae4a22006f")
 		)
 		(pin "3"
-			(uuid "5c8827c7-6d7a-4392-b0ef-329892ec2b90")
+			(uuid "2f179cdd-d870-4fe9-a019-8e64765ee08b")
 		)
 		(instances
 			(project "Untitled"
 				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U10")
+					(reference "U3")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "ZC323200:ZC323200")
-		(at 35.56 123.19 0)
+		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
+		(at 298.45 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3162,9 +5026,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "36130522-89c8-4f33-be55-d5147f78bcda")
-		(property "Reference" "U13"
-			(at 35.56 107.95 0)
+		(uuid "3538042c-2ef3-4634-b58f-98b7d45fd14e")
+		(property "Reference" "U15"
+			(at 298.45 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3173,8 +5037,8 @@
 				)
 			)
 		)
-		(property "Value" "ZC323200"
-			(at 35.56 110.49 0)
+		(property "Value" "TMC2208_SILENTSTEPSTICK"
+			(at 298.45 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3183,8 +5047,8 @@
 				)
 			)
 		)
-		(property "Footprint" "ZC323200:XCVR_ZC323200"
-			(at 35.56 123.19 0)
+		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
+			(at 298.45 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3196,7 +5060,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 123.19 0)
+			(at 298.45 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3206,20 +5070,8 @@
 				)
 			)
 		)
-		(property "Description" "GY-NEO6MV2 GY-GPS6MV2 NEO-6M GPS Module with Flight Control APM2.5"
-			(at 35.56 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MF" "YKS"
-			(at 35.56 123.19 0)
+		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
+			(at 298.45 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3230,32 +5082,8 @@
 				(justify bottom)
 			)
 		)
-		(property "MAXIMUM_PACKAGE_HEIGHT" "12.30mm"
-			(at 35.56 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "CREATOR" "RODRIGO"
-			(at 35.56 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Price" "None"
-			(at 35.56 123.19 0)
+		(property "MF" "Trinamic Motion"
+			(at 298.45 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3267,7 +5095,269 @@
 			)
 		)
 		(property "Package" "None"
-			(at 35.56 123.19 0)
+			(at 298.45 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Price" "None"
+			(at 298.45 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
+			(at 298.45 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
+			(at 298.45 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MP" "TMC2208 SILENTSTEPSTICK"
+			(at 298.45 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 298.45 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MANUFACTURER" "Trinamic Motion"
+			(at 298.45 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(pin "JP1_1"
+			(uuid "7e1e39ff-5dea-4cec-88fa-21fdd75572a2")
+		)
+		(pin "JP1_2"
+			(uuid "69ac216b-e4ea-4790-a532-ce5583017744")
+		)
+		(pin "JP1_4"
+			(uuid "42d38075-f3bd-49af-9b77-f812a4dc06a8")
+		)
+		(pin "JP1_5"
+			(uuid "0f55fbfb-0498-4375-8e7b-d52b11089892")
+		)
+		(pin "JP1_6"
+			(uuid "cae73f11-3597-44dc-89d6-a47c0d28dfd3")
+		)
+		(pin "VREF"
+			(uuid "b6dec81a-86f4-455d-9e0c-eea758eb1ab1")
+		)
+		(pin "JP3_2"
+			(uuid "ca94dc7c-c251-40ee-8c15-970133cfc5bb")
+		)
+		(pin "JP3_1"
+			(uuid "6c0b71bb-47b8-4eda-b0a9-f2b22634c85d")
+		)
+		(pin "JP2_8"
+			(uuid "df4598fe-d557-4b07-b070-df35f9a94765")
+		)
+		(pin "JP2_7"
+			(uuid "5b4740e9-8146-4642-818e-8928f1e2e7f2")
+		)
+		(pin "JP2_6"
+			(uuid "19f2fa9f-ed8d-47d8-9531-6910b13748c3")
+		)
+		(pin "JP2_5"
+			(uuid "7b858c59-792b-4bdb-a57c-a27ac08f81a3")
+		)
+		(pin "JP2_3"
+			(uuid "e1993516-2587-42f2-a050-ac5e1f787bdf")
+		)
+		(pin "JP2_4"
+			(uuid "72f9fc2d-1ec6-4f96-80e5-8607fef05599")
+		)
+		(pin "JP2_1"
+			(uuid "24bd57f8-0618-4fd0-87e6-d53ba7df9457")
+		)
+		(pin "JP2_2"
+			(uuid "2e2388e0-5d2b-423a-a2af-fb23c95eb8ab")
+		)
+		(pin "JP1_7"
+			(uuid "ec09d543-8454-4203-8098-26daad2305e5")
+		)
+		(pin "JP1_8"
+			(uuid "b0cb7b0b-4f14-4af6-8380-8512a780a7aa")
+		)
+		(instances
+			(project "Untitled"
+				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
+					(reference "U15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ZC323200:ZC323200")
+		(at 26.67 261.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36130522-89c8-4f33-be55-d5147f78bcda")
+		(property "Reference" "U13"
+			(at 26.67 246.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ZC323200"
+			(at 26.67 248.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "ZC323200:XCVR_ZC323200"
+			(at 26.67 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Datasheet" ""
+			(at 26.67 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "GY-NEO6MV2 GY-GPS6MV2 NEO-6M GPS Module with Flight Control APM2.5"
+			(at 26.67 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MF" "YKS"
+			(at 26.67 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MAXIMUM_PACKAGE_HEIGHT" "12.30mm"
+			(at 26.67 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "CREATOR" "RODRIGO"
+			(at 26.67 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Price" "None"
+			(at 26.67 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Package" "None"
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3279,7 +5369,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/ZC323200/YKS/view-part/?ref=eda"
-			(at 35.56 123.19 0)
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3291,7 +5381,7 @@
 			)
 		)
 		(property "STANDARD" "IPC-7351B"
-			(at 35.56 123.19 0)
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3303,7 +5393,7 @@
 			)
 		)
 		(property "PARTREV" "N/A"
-			(at 35.56 123.19 0)
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3315,7 +5405,7 @@
 			)
 		)
 		(property "VERIFIER" ""
-			(at 35.56 123.19 0)
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3327,7 +5417,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/ZC323200/YKS/view-part/?ref=snap"
-			(at 35.56 123.19 0)
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3339,7 +5429,7 @@
 			)
 		)
 		(property "MP" "ZC323200"
-			(at 35.56 123.19 0)
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3351,7 +5441,7 @@
 			)
 		)
 		(property "Availability" "Not in stock"
-			(at 35.56 123.19 0)
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3363,7 +5453,7 @@
 			)
 		)
 		(property "MANUFACTURER" "YKS"
-			(at 35.56 123.19 0)
+			(at 26.67 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3409,7 +5499,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Stepper_Motor_bipolar")
-		(at 264.16 33.02 0)
+		(at 360.68 177.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3420,7 +5510,7 @@
 		(fields_autoplaced yes)
 		(uuid "37a298b7-a88b-4a07-b5ee-4dbc1a2c78c1")
 		(property "Reference" "M1"
-			(at 269.24 30.899 0)
+			(at 365.76 175.679 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3431,7 +5521,7 @@
 			)
 		)
 		(property "Value" "Stepper_Motor_bipolar"
-			(at 269.24 33.439 0)
+			(at 365.76 178.219 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3442,7 +5532,7 @@
 			)
 		)
 		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
-			(at 264.414 33.274 0)
+			(at 360.934 178.054 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3453,7 +5543,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 264.414 33.274 0)
+			(at 360.934 178.054 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3464,7 +5554,7 @@
 			)
 		)
 		(property "Description" "4-wire bipolar stepper motor"
-			(at 264.16 33.02 0)
+			(at 360.68 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3496,8 +5586,96 @@
 		)
 	)
 	(symbol
+		(lib_id "Motor:Stepper_Motor_bipolar")
+		(at 360.68 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38ade7b1-b85f-4171-b33a-c8335f3492f3")
+		(property "Reference" "M4"
+			(at 365.76 114.719 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Stepper_Motor_bipolar"
+			(at 365.76 117.259 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
+			(at 360.934 117.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
+			(at 360.934 117.094 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "4-wire bipolar stepper motor"
+			(at 360.68 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "967ca6e4-8b0b-42b5-ac97-652cb5acbd93")
+		)
+		(pin "2"
+			(uuid "aab289c8-f629-4f36-a25b-2411ee2805f5")
+		)
+		(pin "3"
+			(uuid "7a1a983e-3f9d-48d3-847e-575e9246b508")
+		)
+		(pin "4"
+			(uuid "fbe8ccb4-1a6f-4cd8-a1ea-0f406a64c1fb")
+		)
+		(instances
+			(project "Untitled"
+				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
+					(reference "M4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Magnetic:A1104xLH")
-		(at 85.09 153.67 0)
+		(at 373.38 151.13 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3508,7 +5686,7 @@
 		(fields_autoplaced yes)
 		(uuid "4499a7f1-681e-4713-8244-34328926bc16")
 		(property "Reference" "U1"
-			(at 78.74 152.3999 0)
+			(at 367.03 149.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3519,7 +5697,7 @@
 			)
 		)
 		(property "Value" "A1104xLH"
-			(at 78.74 154.9399 0)
+			(at 367.03 152.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3530,7 +5708,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
-			(at 85.09 170.942 0)
+			(at 373.38 168.402 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3542,7 +5720,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
-			(at 85.09 166.37 0)
+			(at 373.38 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3553,7 +5731,7 @@
 			)
 		)
 		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
-			(at 85.09 168.656 0)
+			(at 373.38 166.116 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3583,7 +5761,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Magnetic:A1104xLH")
-		(at 85.09 180.34 0)
+		(at 226.06 29.21 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3592,201 +5770,43 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5c4f181d-f44a-42da-8271-48aba6647cb9")
-		(property "Reference" "U2"
-			(at 78.74 179.0699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "A1104xLH"
-			(at 78.74 181.6099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
-			(at 85.09 197.612 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
-			(at 85.09 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
-			(at 85.09 195.326 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "75d8394d-cf36-4d82-b15a-1209dd433339")
-		)
-		(pin "2"
-			(uuid "0c06b649-ae71-4ff7-9b3a-248c727b26b3")
-		)
-		(pin "1"
-			(uuid "c909a3f5-94d5-4b6b-ae54-3219d747dd3c")
-		)
-		(instances
-			(project "Untitled"
-				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Sensor_Magnetic:A1104xLH")
-		(at 153.67 180.34 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6c8f3afd-0a12-4c8e-a171-edbd67e47bf2")
-		(property "Reference" "U4"
-			(at 147.32 179.0699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "A1104xLH"
-			(at 147.32 181.6099 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
-			(at 153.67 197.612 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
-			(at 153.67 193.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
-			(at 153.67 195.326 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "82551641-99a9-4dad-ad15-321ba42395a9")
-		)
-		(pin "1"
-			(uuid "5751a453-597b-4ffd-8a49-976c08e894d3")
-		)
-		(pin "3"
-			(uuid "1970cf58-db64-431e-8a2b-63b048a4da29")
-		)
-		(instances
-			(project "Untitled"
-				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
-		(at 233.68 36.83 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7a10136a-e746-49c3-bfed-726a566793b4")
+		(uuid "6764b75c-ebc3-4625-8081-1db982578966")
 		(property "Reference" "U5"
-			(at 233.68 13.97 0)
+			(at 219.71 27.9399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "TMC2208_SILENTSTEPSTICK"
-			(at 233.68 16.51 0)
+		(property "Value" "A1104xLH"
+			(at 219.71 30.4799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
-			(at 233.68 36.83 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
+			(at 226.06 46.482 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
+			(at 226.06 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3794,11 +5814,10 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify bottom)
 			)
 		)
-		(property "Datasheet" ""
-			(at 233.68 36.83 0)
+		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
+			(at 226.06 44.196 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3808,167 +5827,14 @@
 				)
 			)
 		)
-		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
+		(pin "1"
+			(uuid "fa258756-c866-4e1c-928c-0e9640a9c205")
 		)
-		(property "MF" "Trinamic Motion"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
+		(pin "2"
+			(uuid "7f44d274-bdb5-4047-b7f5-5b2b66ceff8a")
 		)
-		(property "Package" "None"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Price" "None"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MP" "TMC2208 SILENTSTEPSTICK"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MANUFACTURER" "Trinamic Motion"
-			(at 233.68 36.83 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(pin "JP1_1"
-			(uuid "e2f4b861-15f0-445c-9b4a-9afbcbed1086")
-		)
-		(pin "JP1_2"
-			(uuid "9aa1bad7-ec12-4474-bd30-c0758a52b2da")
-		)
-		(pin "JP1_4"
-			(uuid "703e8b85-6f87-4591-b0ca-4c629c704fb7")
-		)
-		(pin "JP1_5"
-			(uuid "26f6d6f5-a0e9-4433-82c0-69e39774187a")
-		)
-		(pin "JP1_6"
-			(uuid "ecc6828e-ceb3-41af-b8d4-bbb0648e2da3")
-		)
-		(pin "VREF"
-			(uuid "899a9fc7-419f-4bfa-9735-3cc4f6f9fb3e")
-		)
-		(pin "JP3_2"
-			(uuid "7b943409-0b97-4c4f-a8e9-80434570848e")
-		)
-		(pin "JP3_1"
-			(uuid "ae6b35d1-bc0b-476c-837d-6a0eb4431c6d")
-		)
-		(pin "JP2_8"
-			(uuid "585e6b11-8d28-4336-9c93-2ad3c83265fb")
-		)
-		(pin "JP2_7"
-			(uuid "ea6420d1-c306-416b-a391-94743347d38d")
-		)
-		(pin "JP2_6"
-			(uuid "62f13ecf-ace0-4b72-8255-4e0eec259fb9")
-		)
-		(pin "JP2_5"
-			(uuid "ca4a94bb-0bfd-466a-b7cd-5554d6ba6e6a")
-		)
-		(pin "JP2_3"
-			(uuid "0253087c-4ee6-443e-9152-fa6d471a1241")
-		)
-		(pin "JP2_4"
-			(uuid "0c7c64c0-894d-42cb-a3e0-46ca5909eeed")
-		)
-		(pin "JP2_1"
-			(uuid "3f93ed8f-6bda-4852-8386-10197fab75f2")
-		)
-		(pin "JP2_2"
-			(uuid "7f894ceb-79d1-4172-9b84-a30f9a80f982")
-		)
-		(pin "JP1_7"
-			(uuid "17a36146-c2aa-495c-b008-ceb6a0a09a54")
-		)
-		(pin "JP1_8"
-			(uuid "0b572328-282a-46fb-9515-a041ff753812")
+		(pin "3"
+			(uuid "81258f4c-2d93-4abc-a1e6-17f36afb3d94")
 		)
 		(instances
 			(project "Untitled"
@@ -3980,460 +5846,8 @@
 		)
 	)
 	(symbol
-		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
-		(at 233.68 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9dd73112-e90f-4fb2-88f0-80a6e09d336e")
-		(property "Reference" "U6"
-			(at 233.68 59.69 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TMC2208_SILENTSTEPSTICK"
-			(at 233.68 62.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MF" "Trinamic Motion"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Package" "None"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Price" "None"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MP" "TMC2208 SILENTSTEPSTICK"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MANUFACTURER" "Trinamic Motion"
-			(at 233.68 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(pin "JP1_1"
-			(uuid "d0802744-538f-4100-83b1-43636d9b2bfc")
-		)
-		(pin "JP1_2"
-			(uuid "04f6f472-0e48-4e97-b77f-648fd860a9d9")
-		)
-		(pin "JP1_4"
-			(uuid "752a45f3-f90f-4d8e-989f-a2684cf5b8db")
-		)
-		(pin "JP1_5"
-			(uuid "a1dded78-987d-4d2d-a8de-86c46a56b6a0")
-		)
-		(pin "JP1_6"
-			(uuid "9b1e989e-b5d9-4754-be73-4bf08638d2b2")
-		)
-		(pin "VREF"
-			(uuid "470c3360-7e24-432d-a1ee-d83e7d16c478")
-		)
-		(pin "JP3_2"
-			(uuid "c06bb830-7c85-43d7-9595-63b751765b93")
-		)
-		(pin "JP3_1"
-			(uuid "b3668b4e-606d-474a-9ade-e4377b991807")
-		)
-		(pin "JP2_8"
-			(uuid "9d805e5a-d31f-49d2-91c7-365d934ba638")
-		)
-		(pin "JP2_7"
-			(uuid "d085f025-1113-454a-9a3b-320d17a93dba")
-		)
-		(pin "JP2_6"
-			(uuid "10e4570c-5708-4b06-95bc-16a33532dba9")
-		)
-		(pin "JP2_5"
-			(uuid "228cac64-744f-4487-920e-7e20cc0df7d3")
-		)
-		(pin "JP2_3"
-			(uuid "22fbfb63-c35f-4f53-a460-492fa9987980")
-		)
-		(pin "JP2_4"
-			(uuid "c799734a-89e3-4cd4-821e-5be90c330bf8")
-		)
-		(pin "JP2_1"
-			(uuid "c8f06430-3468-499c-8735-ae899a241b24")
-		)
-		(pin "JP2_2"
-			(uuid "ea71469e-bfc7-4461-b0f8-9a53d3079366")
-		)
-		(pin "JP1_7"
-			(uuid "ddcc030a-eb4e-4182-835f-a120e545b3c4")
-		)
-		(pin "JP1_8"
-			(uuid "8653d561-fd87-459c-8073-ec904248da45")
-		)
-		(instances
-			(project "Untitled"
-				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
-		(at 233.68 170.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a02a0fdd-c78a-4fbb-ba95-de06651d51c5")
-		(property "Reference" "U8"
-			(at 233.68 147.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TMC2208_SILENTSTEPSTICK"
-			(at 233.68 149.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Datasheet" ""
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MF" "Trinamic Motion"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Package" "None"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Price" "None"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MP" "TMC2208 SILENTSTEPSTICK"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Availability" "In Stock"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(property "MANUFACTURER" "Trinamic Motion"
-			(at 233.68 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-			)
-		)
-		(pin "JP1_1"
-			(uuid "97446eef-ed3a-4c86-a18f-991bd43c8038")
-		)
-		(pin "JP1_2"
-			(uuid "62016dfb-9f6f-4f9f-b872-da534751b568")
-		)
-		(pin "JP1_4"
-			(uuid "39ebc25f-3399-466d-98c0-7c7bdd7cd379")
-		)
-		(pin "JP1_5"
-			(uuid "61cd97c9-afbd-45e5-a579-d56ba93e654b")
-		)
-		(pin "JP1_6"
-			(uuid "bc20b055-d193-4f69-82d8-a3f23fc32599")
-		)
-		(pin "VREF"
-			(uuid "f9fa9e82-ae22-45eb-8c59-5835c526dd90")
-		)
-		(pin "JP3_2"
-			(uuid "22e1bad5-4e2b-48ad-9321-d64d99635287")
-		)
-		(pin "JP3_1"
-			(uuid "47c91372-15db-4276-a19f-f9589b127f02")
-		)
-		(pin "JP2_8"
-			(uuid "93054e93-f115-4ba5-a91a-93e5134caefc")
-		)
-		(pin "JP2_7"
-			(uuid "4628cc52-4dc9-407c-89ac-82ba9e265591")
-		)
-		(pin "JP2_6"
-			(uuid "771bc147-b017-49dd-b8e1-b7e5b77950fa")
-		)
-		(pin "JP2_5"
-			(uuid "ffcf7f7a-3739-46eb-abd0-3f87d653f4ab")
-		)
-		(pin "JP2_3"
-			(uuid "9b08fd45-b0aa-4788-ac91-f1ce6b30c0ad")
-		)
-		(pin "JP2_4"
-			(uuid "b3ed4e6b-0329-44f5-9505-3e3327551f93")
-		)
-		(pin "JP2_1"
-			(uuid "521542f0-655b-4fe9-a878-6bf75a826af1")
-		)
-		(pin "JP2_2"
-			(uuid "bd9be076-d979-4ba0-9106-27cb29707ef7")
-		)
-		(pin "JP1_7"
-			(uuid "5d68eaf4-68ac-4180-9ca1-00cfd02a3282")
-		)
-		(pin "JP1_8"
-			(uuid "ac2db3a2-03a8-4040-8997-0a27b095cda7")
-		)
-		(instances
-			(project "Untitled"
-				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Motor:Stepper_Motor_bipolar")
-		(at 262.89 59.69 0)
+		(at 213.36 177.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4442,9 +5856,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a19b38c4-1ab5-4eac-b65d-af2729c54ec3")
+		(uuid "6f487365-5c43-4778-8808-463defbc3f0b")
 		(property "Reference" "M2"
-			(at 267.97 57.569 0)
+			(at 218.44 175.679 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4455,7 +5869,7 @@
 			)
 		)
 		(property "Value" "Stepper_Motor_bipolar"
-			(at 267.97 60.109 0)
+			(at 218.44 178.219 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4466,7 +5880,7 @@
 			)
 		)
 		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
-			(at 263.144 59.944 0)
+			(at 213.614 178.054 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4477,7 +5891,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 263.144 59.944 0)
+			(at 213.614 178.054 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4488,7 +5902,7 @@
 			)
 		)
 		(property "Description" "4-wire bipolar stepper motor"
-			(at 262.89 59.69 0)
+			(at 213.36 177.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4499,16 +5913,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "c14ec437-ae1f-415c-b04b-a7fe03c3d019")
+			(uuid "44a3874e-b29e-4456-9d79-f8a11197a5ea")
 		)
 		(pin "2"
-			(uuid "c697635b-0eb7-4cbf-843e-08c861937d38")
+			(uuid "bc7b889d-d7eb-4eaf-8448-2d74097d707a")
 		)
 		(pin "3"
-			(uuid "287402b9-8921-4100-9425-d57bde020020")
+			(uuid "09ff1cab-a652-4d84-a9ce-9934945b6a96")
 		)
 		(pin "4"
-			(uuid "fa3a3994-f9d9-4bdc-8e2f-72151d93ce66")
+			(uuid "edc7cda4-b28c-45ed-80fc-7d75082f31ac")
 		)
 		(instances
 			(project "Untitled"
@@ -4521,7 +5935,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Magnetic:A1104xLH")
-		(at 116.84 153.67 0)
+		(at 373.38 29.21 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4530,9 +5944,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a5c0589d-4cc7-4f77-9262-d773def28aa2")
-		(property "Reference" "U9"
-			(at 110.49 152.3999 0)
+		(uuid "76af96a5-73df-4a94-9086-a8043a5f0ac9")
+		(property "Reference" "U6"
+			(at 367.03 27.9399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4543,7 +5957,7 @@
 			)
 		)
 		(property "Value" "A1104xLH"
-			(at 110.49 154.9399 0)
+			(at 367.03 30.4799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4554,7 +5968,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
-			(at 116.84 170.942 0)
+			(at 373.38 46.482 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4566,7 +5980,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
-			(at 116.84 166.37 0)
+			(at 373.38 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4577,7 +5991,7 @@
 			)
 		)
 		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
-			(at 116.84 168.656 0)
+			(at 373.38 44.196 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4588,26 +6002,26 @@
 			)
 		)
 		(pin "1"
-			(uuid "4e66e3ec-35a7-494b-a629-82fbb7eb3f69")
-		)
-		(pin "3"
-			(uuid "245e9154-3990-4229-97bb-96b3c1f3e3eb")
+			(uuid "d6f1a1fd-6ee4-47ea-a962-bc3406ea3bdf")
 		)
 		(pin "2"
-			(uuid "a94ea74d-7672-4064-b3a6-9d31f0c8752f")
+			(uuid "cbc0e9e7-0b5b-44d0-aebb-aa250e7c0564")
+		)
+		(pin "3"
+			(uuid "988440b6-09a5-4bcb-a721-818c732fbd4e")
 		)
 		(instances
 			(project "Untitled"
 				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U9")
+					(reference "U6")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Motor:Stepper_Motor_bipolar")
-		(at 262.89 102.87 0)
+		(lib_id "Sensor_Magnetic:A1104xLH")
+		(at 373.38 90.17 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4616,31 +6030,43 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a95a7417-a915-4f7d-9d37-a9a7c19eb1d6")
-		(property "Reference" "M4"
-			(at 267.97 100.749 0)
+		(uuid "7aaa837a-e39d-4231-ad82-88a63b37c42c")
+		(property "Reference" "U4"
+			(at 367.03 88.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "Stepper_Motor_bipolar"
-			(at 267.97 103.289 0)
+		(property "Value" "A1104xLH"
+			(at 367.03 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
-			(at 263.144 103.124 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
+			(at 373.38 107.442 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
+			(at 373.38 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4650,107 +6076,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 263.144 103.124 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "4-wire bipolar stepper motor"
-			(at 262.89 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "046eb0d0-1af9-4157-96a4-a70555cfcca0")
-		)
-		(pin "2"
-			(uuid "ffa83722-0a3a-41b0-858a-6225c7fd842d")
-		)
-		(pin "3"
-			(uuid "16e70a7e-3b3f-4aba-81ca-54f3fbf5b487")
-		)
-		(pin "4"
-			(uuid "e56bb5b2-1f69-4c73-a001-4ee5ac165d0d")
-		)
-		(instances
-			(project "Untitled"
-				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "M4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Motor:Stepper_Motor_bipolar")
-		(at 264.16 143.51 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bdc2b763-2093-4577-8ebe-71260ac27add")
-		(property "Reference" "M6"
-			(at 269.24 141.389 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Stepper_Motor_bipolar"
-			(at 269.24 143.929 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
-			(at 264.414 143.764 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 264.414 143.764 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "4-wire bipolar stepper motor"
-			(at 264.16 143.51 0)
+		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
+			(at 373.38 105.156 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4761,21 +6088,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "4786f415-0f84-4acd-9ca0-68c20854b56a")
+			(uuid "5eff7a89-4d74-4367-9fbd-6eeaf46bcdb1")
 		)
 		(pin "2"
-			(uuid "78d17dec-78b5-4ba3-99ac-42d58450d2e3")
+			(uuid "91dbcf46-966d-4f44-896e-92220ffcd85f")
 		)
 		(pin "3"
-			(uuid "636a7a09-e49d-4796-b688-107229322567")
-		)
-		(pin "4"
-			(uuid "da7511d6-632e-4620-b8ff-5221bd97a814")
+			(uuid "e2f81d2c-c3b4-4f3c-8a19-13c22c50c9aa")
 		)
 		(instances
 			(project "Untitled"
 				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "M6")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -4783,7 +6107,7 @@
 	)
 	(symbol
 		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
-		(at 233.68 125.73 0)
+		(at 151.13 165.1 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4792,9 +6116,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "db0f1c63-5c3d-43b7-ab25-f0935fc15f08")
-		(property "Reference" "U7"
-			(at 233.68 102.87 0)
+		(uuid "8050b581-a437-4401-92d6-5a77083c2f3c")
+		(property "Reference" "U12"
+			(at 151.13 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4804,7 +6128,7 @@
 			)
 		)
 		(property "Value" "TMC2208_SILENTSTEPSTICK"
-			(at 233.68 105.41 0)
+			(at 151.13 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4814,7 +6138,7 @@
 			)
 		)
 		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4826,7 +6150,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4837,7 +6161,7 @@
 			)
 		)
 		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4849,7 +6173,7 @@
 			)
 		)
 		(property "MF" "Trinamic Motion"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4861,7 +6185,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4873,7 +6197,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4885,7 +6209,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4897,7 +6221,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4909,7 +6233,7 @@
 			)
 		)
 		(property "MP" "TMC2208 SILENTSTEPSTICK"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4921,7 +6245,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4933,7 +6257,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Trinamic Motion"
-			(at 233.68 125.73 0)
+			(at 151.13 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4945,63 +6269,237 @@
 			)
 		)
 		(pin "JP1_1"
-			(uuid "97064cd0-8bfb-49a8-bef3-2076a22076f7")
+			(uuid "1ee2e843-4d0d-4710-b961-ecaef8a84b31")
 		)
 		(pin "JP1_2"
-			(uuid "5f348b14-8d0a-44a0-8271-b0c123d1b73e")
+			(uuid "c624e0bb-b5c1-44ee-9b05-de6a65fc96d6")
 		)
 		(pin "JP1_4"
-			(uuid "df4b30ff-c961-49db-a9ce-17061016ca56")
+			(uuid "48147ea8-95df-4ad9-b9a4-9b69ae5c54f1")
 		)
 		(pin "JP1_5"
-			(uuid "5a275496-c6f4-4140-8ed2-5d3c67f8e245")
+			(uuid "7f20f48b-342c-46eb-a176-587d65ce8500")
 		)
 		(pin "JP1_6"
-			(uuid "10fb4ac6-3fee-422c-9f31-928bf21bc3a3")
+			(uuid "836ba745-e8dc-46b2-94d8-e2456b1f8c2d")
 		)
 		(pin "VREF"
-			(uuid "2affe604-04f6-4eba-bbb6-2858eb3e1fbf")
+			(uuid "d3294daf-8c7d-4cc8-928e-180b295dabde")
 		)
 		(pin "JP3_2"
-			(uuid "1e95bbfb-88c6-44a2-a213-18a47a6a83f3")
+			(uuid "9fde59d6-359f-4b73-beac-ef16529d70c7")
 		)
 		(pin "JP3_1"
-			(uuid "bdd41e6b-dae5-4866-8b84-483e2e049ffc")
+			(uuid "eee711fe-352f-4b3e-9bc1-42b1532edc91")
 		)
 		(pin "JP2_8"
-			(uuid "385dc61c-ce90-430c-ae95-403ae24bd0d2")
+			(uuid "1a32d72a-e953-4dc9-8086-e1c28de29026")
 		)
 		(pin "JP2_7"
-			(uuid "9bfffb9c-1955-4dc1-88cf-fb9ca0f66b97")
+			(uuid "7c2d5bd9-5ddc-4be7-8c4f-2effdd5385db")
 		)
 		(pin "JP2_6"
-			(uuid "50b76fe5-21c4-4d2c-b72b-ad1085aa3416")
+			(uuid "62950564-bb1d-4981-b677-bb27e745af63")
 		)
 		(pin "JP2_5"
-			(uuid "9edc7210-b06b-4332-8070-20780ac1b926")
+			(uuid "f0d776c5-8661-46aa-8a25-a798a490df2c")
 		)
 		(pin "JP2_3"
-			(uuid "7c0aeac5-c192-4a66-8c9a-c5a952450e74")
+			(uuid "f42b9a0b-dbd3-4423-857b-589353444048")
 		)
 		(pin "JP2_4"
-			(uuid "27528885-b8f4-4a6f-beac-dc40c479e819")
+			(uuid "0ae7f066-cd90-4e04-acf4-314fb3b82ea6")
 		)
 		(pin "JP2_1"
-			(uuid "036148ad-0a31-48f3-87a7-5b0337f03d95")
+			(uuid "3d151229-75f2-499b-a604-3bb6e9fea9c3")
 		)
 		(pin "JP2_2"
-			(uuid "79089f23-400b-4daa-9fb0-965331437d70")
+			(uuid "6d11754c-6ea1-4fed-86f9-11e498b3f20f")
 		)
 		(pin "JP1_7"
-			(uuid "d98c8abb-be2c-45ca-af0e-0e223bf13bb3")
+			(uuid "b933eb08-de63-4246-86e6-4adf9a0160e3")
 		)
 		(pin "JP1_8"
-			(uuid "58bbd5d7-b0e4-4f89-89f6-0777e1864830")
+			(uuid "cfa0c526-e3b4-445c-a6ea-584c936fc76c")
 		)
 		(instances
 			(project "Untitled"
 				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U7")
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Magnetic:A1104xLH")
+		(at 226.06 151.13 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "813aecce-5dfa-4a6c-8105-8ab2b49b5eb2")
+		(property "Reference" "U2"
+			(at 219.71 149.8599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "A1104xLH"
+			(at 219.71 152.3999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
+			(at 226.06 168.402 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
+			(at 226.06 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
+			(at 226.06 166.116 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7d3d5f67-80aa-46d4-b90a-4592752318e9")
+		)
+		(pin "2"
+			(uuid "ae148729-def1-4bbc-9d6e-daa23555c5b8")
+		)
+		(pin "3"
+			(uuid "0294514b-9b00-48d0-8ee4-3c63d34e87db")
+		)
+		(instances
+			(project "Untitled"
+				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Motor:Stepper_Motor_bipolar")
+		(at 213.36 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd95976e-4be4-46ad-b3a2-a7dec5d92509")
+		(property "Reference" "M5"
+			(at 218.44 53.759 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Stepper_Motor_bipolar"
+			(at 218.44 56.299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
+			(at 213.614 56.134 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
+			(at 213.614 56.134 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "4-wire bipolar stepper motor"
+			(at 213.36 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0d773612-d109-4812-b013-4cd54b905fa7")
+		)
+		(pin "2"
+			(uuid "b5a5d455-19c9-48d5-a4de-de6d4a084cc3")
+		)
+		(pin "3"
+			(uuid "f97909f1-8733-4276-90c8-f0554ae6a61e")
+		)
+		(pin "4"
+			(uuid "12afdbcf-16d5-49d2-a496-71f60a87ec02")
+		)
+		(instances
+			(project "Untitled"
+				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
+					(reference "M5")
 					(unit 1)
 				)
 			)
@@ -5009,7 +6507,7 @@
 	)
 	(symbol
 		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
-		(at 170.18 36.83 0)
+		(at 298.45 165.1 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5020,7 +6518,7 @@
 		(fields_autoplaced yes)
 		(uuid "def06bcf-ffbb-49da-8561-057ba3109d21")
 		(property "Reference" "U11"
-			(at 170.18 13.97 0)
+			(at 298.45 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5030,7 +6528,7 @@
 			)
 		)
 		(property "Value" "TMC2208_SILENTSTEPSTICK"
-			(at 170.18 16.51 0)
+			(at 298.45 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5040,7 +6538,7 @@
 			)
 		)
 		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5052,7 +6550,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5063,7 +6561,7 @@
 			)
 		)
 		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5075,7 +6573,7 @@
 			)
 		)
 		(property "MF" "Trinamic Motion"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5087,7 +6585,7 @@
 			)
 		)
 		(property "Package" "None"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5099,7 +6597,7 @@
 			)
 		)
 		(property "Price" "None"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5111,7 +6609,7 @@
 			)
 		)
 		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5123,7 +6621,7 @@
 			)
 		)
 		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5135,7 +6633,7 @@
 			)
 		)
 		(property "MP" "TMC2208 SILENTSTEPSTICK"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5147,7 +6645,7 @@
 			)
 		)
 		(property "Availability" "In Stock"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5159,7 +6657,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Trinamic Motion"
-			(at 170.18 36.83 0)
+			(at 298.45 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5234,8 +6732,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Sensor_Magnetic:A1104xLH")
-		(at 152.4 153.67 0)
+		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
+		(at 298.45 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5244,43 +6742,29 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "edb5f7f1-0a49-47c9-86f0-0abc6abbb807")
-		(property "Reference" "U3"
-			(at 146.05 152.3999 0)
+		(uuid "e55da3b0-086e-4168-86fe-56dcc5a86e24")
+		(property "Reference" "U17"
+			(at 298.45 20.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "A1104xLH"
-			(at 146.05 154.9399 0)
+		(property "Value" "TMC2208_SILENTSTEPSTICK"
+			(at 298.45 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23W"
-			(at 152.4 170.942 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.allegromicro.com/-/media/files/datasheets/a110x-datasheet.ashx"
-			(at 152.4 166.37 0)
+		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
+			(at 298.45 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5288,10 +6772,11 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(justify bottom)
 			)
 		)
-		(property "Description" "Hall effect switch, unipolar (south-polarity), Bop=70-350G, Brp=50-330G, 3.8-24V supply, SOT-23W"
-			(at 152.4 168.656 0)
+		(property "Datasheet" ""
+			(at 298.45 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5301,19 +6786,398 @@
 				)
 			)
 		)
-		(pin "1"
-			(uuid "1c0b3ba5-5ee4-4eea-84df-23ba517a8c21")
+		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
 		)
-		(pin "3"
-			(uuid "9af88ed0-abfd-4341-89f9-cb412dcb04a5")
+		(property "MF" "Trinamic Motion"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
 		)
-		(pin "2"
-			(uuid "8635051d-5885-4477-b2f4-0eb1fa5e5a07")
+		(property "Package" "None"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Price" "None"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MP" "TMC2208 SILENTSTEPSTICK"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MANUFACTURER" "Trinamic Motion"
+			(at 298.45 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(pin "JP1_1"
+			(uuid "1f9d8ede-4b4c-4da4-a060-4a4b33f93d43")
+		)
+		(pin "JP1_2"
+			(uuid "24fdee21-592e-4106-b8f6-b37adcf59c4e")
+		)
+		(pin "JP1_4"
+			(uuid "005cf6a0-1d96-4337-af03-a014783e96a9")
+		)
+		(pin "JP1_5"
+			(uuid "a6b4a09f-e7d1-440b-9807-b48ca543eab0")
+		)
+		(pin "JP1_6"
+			(uuid "b0ca686c-42c3-4886-9acb-62b2d7a62ea3")
+		)
+		(pin "VREF"
+			(uuid "064260b3-4482-4d41-97c4-8ddfbf3a7fc9")
+		)
+		(pin "JP3_2"
+			(uuid "68a606b0-7cab-4511-8ccd-21913d5d4076")
+		)
+		(pin "JP3_1"
+			(uuid "68486c46-c808-4fea-bc15-b1cb03146369")
+		)
+		(pin "JP2_8"
+			(uuid "c1f4f841-f91b-4840-b166-8ac09c68ccb9")
+		)
+		(pin "JP2_7"
+			(uuid "05f1813a-ad37-41fc-b909-e460e688fd72")
+		)
+		(pin "JP2_6"
+			(uuid "957aecfb-3848-4ceb-917b-4d6653b2d5f2")
+		)
+		(pin "JP2_5"
+			(uuid "3a78c296-ac2d-4e9f-ba22-178ba50678f2")
+		)
+		(pin "JP2_3"
+			(uuid "7191cea0-c262-441e-94b4-86a4ba157ba5")
+		)
+		(pin "JP2_4"
+			(uuid "7bff6a79-a9c3-4c83-987e-5482958974a7")
+		)
+		(pin "JP2_1"
+			(uuid "e8fcc942-88f6-4413-b187-eaeebd751be3")
+		)
+		(pin "JP2_2"
+			(uuid "c97809f5-f176-42f7-bbf9-3c7dca66c79d")
+		)
+		(pin "JP1_7"
+			(uuid "5d300027-a9ea-495b-bc03-d3253e4a3b12")
+		)
+		(pin "JP1_8"
+			(uuid "93c6ed6e-4aff-4996-8e87-789db12f66d7")
 		)
 		(instances
 			(project "Untitled"
 				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
-					(reference "U3")
+					(reference "U17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "TMC2208_SILENTSTEPSTICK:TMC2208_SILENTSTEPSTICK")
+		(at 151.13 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6ff7f0f-0838-4c72-9adb-68c12bf4932b")
+		(property "Reference" "U16"
+			(at 151.13 20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TMC2208_SILENTSTEPSTICK"
+			(at 151.13 22.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TMC2208_SILENTSTEPSTICK:MODULE_TMC2208_SILENTSTEPSTICK"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Datasheet" ""
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "TMC2208 Motor Controller/Driver, Stepper Power Management Evaluation Board"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MF" "Trinamic Motion"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Package" "None"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Price" "None"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=eda"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/TMC2208%20SILENTSTEPSTICK/Trinamic/view-part/?ref=snap"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MP" "TMC2208 SILENTSTEPSTICK"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(property "MANUFACTURER" "Trinamic Motion"
+			(at 151.13 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+			)
+		)
+		(pin "JP1_1"
+			(uuid "608a78d8-8a25-4d62-9053-8cdac3d9df43")
+		)
+		(pin "JP1_2"
+			(uuid "f54267f9-ab4d-4755-9ca2-d42d9ad993e2")
+		)
+		(pin "JP1_4"
+			(uuid "f30851ba-bc11-4787-972a-88f91acd888d")
+		)
+		(pin "JP1_5"
+			(uuid "7c1d273f-df5c-4beb-9ca0-3ab75e933ae0")
+		)
+		(pin "JP1_6"
+			(uuid "37f77564-4d5e-428e-a1bb-2a2421977fc8")
+		)
+		(pin "VREF"
+			(uuid "b99411fc-0831-4f23-85fa-13e4aede65a4")
+		)
+		(pin "JP3_2"
+			(uuid "b30275a5-3c1a-4f0d-979e-6860b4339909")
+		)
+		(pin "JP3_1"
+			(uuid "98dea363-0688-4d7d-8cd8-f98401c6c332")
+		)
+		(pin "JP2_8"
+			(uuid "f2a3fc2d-f073-43dc-a5a0-a802dc28245e")
+		)
+		(pin "JP2_7"
+			(uuid "5947ff9d-137b-425a-85d0-9e63432bfbf6")
+		)
+		(pin "JP2_6"
+			(uuid "d465a06d-1f06-4e5a-b8a4-8794719ab001")
+		)
+		(pin "JP2_5"
+			(uuid "c2b0bd05-0f46-4e71-99b1-314ea45afc9d")
+		)
+		(pin "JP2_3"
+			(uuid "0001b9f5-19be-4d91-84c3-cc1dbf5ef1fb")
+		)
+		(pin "JP2_4"
+			(uuid "e02b97f0-e5a1-499b-83d6-f8e2e325ef55")
+		)
+		(pin "JP2_1"
+			(uuid "58766586-1a72-4b6a-809f-c497e90cf0a0")
+		)
+		(pin "JP2_2"
+			(uuid "5590164e-cfd8-4c55-828d-e18a828df3c1")
+		)
+		(pin "JP1_7"
+			(uuid "0c2a7b60-f08d-4d52-96f3-8f192a0a1306")
+		)
+		(pin "JP1_8"
+			(uuid "f91e6e39-ab59-4df1-8a88-17b3b81cc8a0")
+		)
+		(instances
+			(project "Untitled"
+				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
+					(reference "U16")
 					(unit 1)
 				)
 			)
@@ -5321,7 +7185,7 @@
 	)
 	(symbol
 		(lib_id "Motor:Stepper_Motor_bipolar")
-		(at 262.89 83.82 0)
+		(at 213.36 116.84 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5330,9 +7194,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f5b08a5f-3310-4e1a-bde2-fdc460ee4a88")
+		(uuid "e886bf0b-0867-44a5-9a43-ad4b02167c6a")
 		(property "Reference" "M3"
-			(at 267.97 81.699 0)
+			(at 218.44 114.719 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5343,7 +7207,7 @@
 			)
 		)
 		(property "Value" "Stepper_Motor_bipolar"
-			(at 267.97 84.239 0)
+			(at 218.44 117.259 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5354,7 +7218,7 @@
 			)
 		)
 		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
-			(at 263.144 84.074 0)
+			(at 213.614 117.094 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5365,7 +7229,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
-			(at 263.144 84.074 0)
+			(at 213.614 117.094 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5376,7 +7240,7 @@
 			)
 		)
 		(property "Description" "4-wire bipolar stepper motor"
-			(at 262.89 83.82 0)
+			(at 213.36 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5387,16 +7251,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "fae75c8b-4e3f-437c-bb0e-4c2de85418b3")
+			(uuid "750a9602-4daa-4815-a7e0-ad83873654f2")
 		)
 		(pin "2"
-			(uuid "7342f5d6-c893-4421-af88-c51c9ccc3a89")
+			(uuid "ecc8245a-a9fb-4717-aaec-4e5d85772ad9")
 		)
 		(pin "3"
-			(uuid "1ab380f6-8641-4cb1-8329-39931564a58a")
+			(uuid "f75a7530-aaf5-4319-bcd0-f30f420e60b1")
 		)
 		(pin "4"
-			(uuid "a59605c5-3290-4d50-af30-186773da3934")
+			(uuid "60f9ae09-b048-447b-a709-3d10204ffb33")
 		)
 		(instances
 			(project "Untitled"
@@ -5405,6 +7269,214 @@
 					(unit 1)
 				)
 			)
+		)
+	)
+	(symbol
+		(lib_id "Motor:Stepper_Motor_bipolar")
+		(at 360.68 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f14a3d58-20a7-43d2-9e34-7fb2d67c9e5d")
+		(property "Reference" "M6"
+			(at 365.76 53.759 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Stepper_Motor_bipolar"
+			(at 365.76 56.299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SON:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4mm"
+			(at 360.934 56.134 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0"
+			(at 360.934 56.134 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "4-wire bipolar stepper motor"
+			(at 360.68 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c443ddb7-86ac-429e-a60b-c2a5fd1fbed1")
+		)
+		(pin "2"
+			(uuid "6bf1d891-121d-43da-bd85-e3815cb1b95f")
+		)
+		(pin "3"
+			(uuid "6eb89e2f-5395-4600-932b-34f0ae01ad13")
+		)
+		(pin "4"
+			(uuid "d32e2152-830d-4bed-9830-4828b6f49a20")
+		)
+		(instances
+			(project "Untitled"
+				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
+					(reference "M6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(group ""
+		(uuid "4675f723-4f35-45f4-9202-02c07449e675")
+		(members "0c89cb41-f21b-4763-af1c-793e2f6c9f32" "2ade746a-5c38-4a3f-9dfe-c44ba4775d1e"
+			"2f82b213-e477-46c6-b3cd-16e107731a48" "2fd6be81-e696-4378-a1f6-e4961cae0890"
+			"320f323b-6467-450e-90b4-c2ffeed04089" "36dbaaea-7f56-471f-9570-927def34dfaa"
+			"3951d7a0-d9af-4eca-959d-5332257d3fc7" "51358d25-21b8-4948-bdb4-c0733a40930d"
+			"5ee71157-fb0d-4cf1-a77d-25ce401109ee" "627100fe-ed93-4c27-aba6-52e0fd8c5b27"
+			"6f487365-5c43-4778-8808-463defbc3f0b" "718d9329-0628-45ef-bb23-25f47e77c77f"
+			"8050b581-a437-4401-92d6-5a77083c2f3c" "813aecce-5dfa-4a6c-8105-8ab2b49b5eb2"
+			"912822e7-ddc7-4c5c-bfff-6d4d7de9cd2d" "93a20ee2-9bba-4c40-9cf8-bdc0456d56c9"
+			"97300351-57df-4486-97d8-8fb38f53d81e" "993a372e-0baf-48a6-a31e-8f9f1f84d836"
+			"999250f6-fc7e-4711-b88f-00cdfcfd8c44" "9ff726be-1fc0-4faf-84cd-732232e3d9a7"
+			"a3055429-d01f-417c-a9ff-e774786c3995" "a4b519b7-4f4c-42bf-ab57-39497016a17c"
+			"b91f8518-3595-4624-ba42-b2c8b18ec92b" "c01d7e9d-037d-4f29-9939-86d2d1b591cb"
+			"c4cb139d-eaa7-43ba-9c94-48baa85640f5" "ce1b53a3-2bab-47e0-828a-14a293855dc0"
+			"d4b8e14b-c835-4a50-be19-e1c2b502a1c2" "d541c84f-9ea3-4259-bf85-1910c3d1c486"
+			"ef5fcd52-a736-4164-9650-ab59a8d3b4a4" "f260dbfe-d393-4ff5-8572-6ee9e2ae57c0"
+			"f44b2d13-1994-457d-a3e1-74ca179a7a95" "fd11496f-76d2-436f-a6b0-615572c60bb3"
+		)
+	)
+	(group ""
+		(uuid "5b51cd4a-03d9-4409-9524-68986f2103ce")
+		(members "05fae5e6-267e-4d27-b16a-6122c0d8f97a" "07e78816-6ef4-4dd0-8320-516d14048f81"
+			"0f5f7f3b-ce60-4ed6-85ca-f7caf39a3126" "13838743-9c04-4919-b4e3-2465669e1829"
+			"1781718b-a44b-449b-b553-204616b7defa" "1b27b336-077a-4ef3-aa27-a2b1d73846a2"
+			"1ca4ee1d-ec7f-4022-94d1-3dd39e9b880e" "1e690e67-7bd1-42e9-82de-35bedb1ae455"
+			"2012df1c-3554-4b3b-adb1-276a10e23593" "278a1c8c-61c8-48d6-a3f7-4c55d14e2697"
+			"3375bf3f-95bb-4403-b1eb-d695a81f2309" "3538042c-2ef3-4634-b58f-98b7d45fd14e"
+			"368b2a4d-e87e-4a4f-91de-a45c0e5d5c2d" "380de0c8-e3ca-42cd-b532-75612817a235"
+			"38ade7b1-b85f-4171-b33a-c8335f3492f3" "3a9a4dcc-0881-436e-8c21-edb05d3b1e53"
+			"3cc238f3-3381-42b0-bcda-4dfaad933cb5" "4b2886f2-d411-40c4-a1fc-6786d4db5295"
+			"4b607d0c-8a3a-4d91-9401-4697b7ad6041" "6c0cc699-3019-4739-ac00-6b75772196f4"
+			"7aaa837a-e39d-4231-ad82-88a63b37c42c" "95baa159-adaa-43f4-9de4-d8927314e0b0"
+			"98c1e338-bcdc-4b33-ba86-02d62b797036" "9f758ad6-0ffd-4380-b063-293e600f6888"
+			"a74f28cc-9779-4dac-ac76-9650efc804f1" "ab8ea0f0-22a2-4a04-bc95-8cd84f316123"
+			"b207b7e6-9c49-4376-8609-5be844313ca9" "b4783f08-519e-46d5-82ec-05496c4f5832"
+			"b734dc88-794f-41d3-b30d-9b83d501c52c" "bebe1541-2f79-4d8e-86fe-017a87a75b7a"
+			"dd301833-2802-4361-9a5f-97647d6d4522" "eef9f6b2-b70e-44cf-983b-2ae1dfc4be66"
+		)
+	)
+	(group ""
+		(uuid "a6681da0-c3b3-49cd-ba7a-10884f105cd3")
+		(members "01431ba1-d3da-4d1f-9f12-4291535f6628" "0583e157-6523-40f8-9665-ff060563b3d1"
+			"0e1df98f-5d0d-49a8-9f3e-3e431860d5d7" "16ec9478-4c30-4a00-8215-0a4389644337"
+			"1bf7e184-ae60-45df-bd1b-b64c8783c1c9" "1ecb9d19-02b8-47ea-b69e-ad269325f1a7"
+			"24602da9-eab8-4f7a-8e25-f9609e75a543" "2d16710e-0967-4811-8fe5-8596886be939"
+			"3687e3c6-eb6a-4d7b-bcb5-c37cc5a98392" "424ac9d3-6438-4dec-ac79-6301bb4d7217"
+			"51c006c8-25ad-4811-a860-a41d9c5c8b7b" "53c4d5fc-4e09-41fd-b5aa-2e2f6a250a18"
+			"6122662b-d475-45c8-bbae-b20f3dc0b0ae" "6524f647-4353-422d-b4d3-257b26a8b895"
+			"77c98782-a78e-494e-a871-41aa6b4f3839" "78e95305-36c6-46e7-921c-bf27a02956c6"
+			"7a5b3043-ec2f-4979-8935-fc3d81c392d3" "8b6dc93e-8af0-4db1-b95a-fe5004a0f9e1"
+			"9337e187-ad8c-4190-8659-622ba7d092b9" "a7d4e695-56aa-48f6-b9b7-3d122dd9dd2a"
+			"b3471fd3-5d92-4586-957e-aad9d4da5609" "b939fc05-6868-48b5-8167-485268ff5921"
+			"c318cde7-d112-445a-a19a-613f36dadadb" "ca4f0d44-0a7e-4b33-ab33-6c31b5e05ef2"
+			"d5248ace-c534-4b97-b1bc-8b2be6448844" "d83aa019-e22e-4c3d-9c83-86021e41cfb8"
+			"e29d78a4-9864-48da-ad78-476b0559c2a9" "e886bf0b-0867-44a5-9a43-ad4b02167c6a"
+			"ea2c36ea-6b33-45b3-bdd2-c31cd8eb1405" "f5c4076a-d173-4c71-a7c5-7f61fda88b08"
+			"f604910c-ac14-465a-9251-4dec782e7da3" "fb7d465b-4b0c-4155-aca3-47b564f4eba6"
+		)
+	)
+	(group ""
+		(uuid "b5c5c643-bc47-46ee-bd29-6ef1f0a8b373")
+		(members "0048e738-edd1-4db8-9f9b-54b24b737f06" "00f10cd2-2d9e-4802-b527-a0fdbf7b0450"
+			"01e8434a-d7d5-416b-87db-4cea571750d8" "035a0129-1308-48c0-bf67-8f4510141687"
+			"0d5bedcc-c98f-4382-9ad6-1d001fe7ac72" "154bc3fa-92bb-4a1a-947a-7acc989fec9e"
+			"24148a11-682e-47fd-aded-bea8d2c26671" "2dcc20aa-11a6-4969-b490-a925807b0cbf"
+			"32421287-b15c-4ff7-8c47-eee96b7c8cb5" "33577062-a87b-4c8b-967a-6625ebd16127"
+			"35ce510c-8267-4062-a81e-fb8129b6a33c" "374445cc-5bc7-407e-bff4-e640a553c7a4"
+			"3b6f25e3-f198-4c7f-81c9-46c5c082003a" "448efc0b-742a-4a94-99fe-04b3d1d42901"
+			"46518e36-0f90-477a-9a7c-5eae75be6ce9" "6764b75c-ebc3-4625-8081-1db982578966"
+			"6efa099a-2460-4434-b32f-e425673479bf" "6f31878a-6253-4dfb-8057-dce986e8f7b4"
+			"73f0c29e-d874-431a-8358-9a67619cfd64" "7b8be918-1a4d-4665-968b-1bbdb147256f"
+			"8091e89d-0cfc-4d1a-a21d-c21bed255174" "93f33923-fc78-4c4c-8730-ca746b3eeed2"
+			"9dbfd98b-cf3a-4768-ac70-097a8396a660" "bca542eb-1d01-4317-b730-fd41d1de2071"
+			"bd95976e-4be4-46ad-b3a2-a7dec5d92509" "c46e3e4c-a87c-4f72-bbdb-0134e0688baa"
+			"cbad2545-ddcf-4a8d-bb64-f5bb5bf625de" "cca96789-955d-4f49-b7eb-4cb4d9c756df"
+			"df91be2e-7e1a-4cf8-b0c2-d964fb2c94ec" "e6ff7f0f-0838-4c72-9adb-68c12bf4932b"
+			"f3f038d3-7aa5-45fe-9c32-5e80d3111f31" "f600b97d-6d89-4857-ba4c-92fa1b6e8001"
+		)
+	)
+	(group ""
+		(uuid "c90f2a0d-d1ba-4853-8380-8f6b26927dc6")
+		(members "12bb4e05-4b62-442f-83ed-dd3aba01c6f4" "2398747e-3f82-4319-b967-61aa58945a80"
+			"2e7d1284-ca05-4cc1-82f9-b564e5515725" "30749b05-e873-44a9-aa1e-b442863cb891"
+			"373140c9-e1ec-404d-83d1-e7f6c9d568f4" "38389a17-8cd0-4ecc-be76-f2b7b5a208af"
+			"45f523c7-a484-4681-9d5d-562b718d3fd0" "4cae9496-3a2f-4c75-b87b-ee483b0739ea"
+			"4d5cc8fa-72df-4e1c-a55b-bf0b5f126dca" "57689fc0-2d72-4c0f-91f9-3db2fe8e4c31"
+			"5d91d62e-e302-4040-b33d-d328304dc0e8" "5e5938fd-25f7-44da-99fe-d8e3467c0706"
+			"720854e0-01c7-4e1a-8288-767cae03aa16" "745bdf16-3157-42ff-9ffb-9e0e466adcf7"
+			"7633616e-9880-45de-a774-7f877631eae6" "76af96a5-73df-4a94-9086-a8043a5f0ac9"
+			"77522305-a3a4-4c35-bad5-6cfad224b3f1" "79ff97d2-11ed-4533-ba02-3ed1e7e3461a"
+			"874180f8-0bfb-4c66-90d1-f49b3f176ed1" "8b9e4e5a-806e-4023-a9d4-ca7614557422"
+			"939781f6-868f-431f-ae09-7f5a6216a8ec" "9cba291d-86d1-42cb-a74d-8a6d10249623"
+			"a056050e-31a9-4e94-ae8d-84f8f4b05e15" "a2757d5d-a5fc-427a-b26b-7d24835d6644"
+			"ab566389-ed29-489a-8747-a870c6342a3b" "b1d96b3c-7e90-4d5d-bc33-6474a40a6cd4"
+			"cceef47b-c54c-4fc9-8314-f7323d24593a" "e1f2dc87-dc36-4943-8e9e-d5af085fac10"
+			"e55da3b0-086e-4168-86fe-56dcc5a86e24" "f14a3d58-20a7-43d2-9e34-7fb2d67c9e5d"
+			"f20fab65-b93a-4d76-ad85-889d096c414a" "f288a01e-147f-4537-8a21-1a40dad7f787"
+		)
+	)
+	(group ""
+		(uuid "e2511dc0-15de-4280-83bd-968f9954b941")
+		(members "00381d73-e71b-4e77-9795-d7cdcb098837" "04dea344-487d-46ec-b540-372eb0570d9b"
+			"12ac4383-76f1-4382-9294-292ef551922a" "12bd2eea-b169-48a4-907e-e6bb22a058e5"
+			"163aed9d-02a9-4b45-b983-841ab8c7d180" "2bdb5d38-183e-412f-990d-9367712e0d1e"
+			"2da518fd-34de-436f-9304-9cf404f01b6e" "37a298b7-a88b-4a07-b5ee-4dbc1a2c78c1"
+			"3d53c9e0-51d6-4ae0-a80d-2109cd52452a" "4499a7f1-681e-4713-8244-34328926bc16"
+			"50e5db43-4bb5-4133-bb3f-4449d42e792c" "517762b2-6ffe-4979-9022-6e77b7c741a8"
+			"5d4278f0-6537-4111-8bb2-2e1e6c4484d1" "73516e1c-51e7-44ab-b12c-b9e90fa308d0"
+			"7e3c460e-968d-439f-910e-49f534cde302" "885828c8-b8e0-4686-b54d-7bec5c1a11f5"
+			"977bcb51-d05b-4683-b24b-e1dcede087e1" "9b061e7f-8a41-4b85-81dc-552d16dc5140"
+			"a0b08abc-d4a8-475c-863e-2606dbb8be9f" "a35b6e9e-9361-4841-a511-338b4f2f6c4d"
+			"a6c95fb2-9145-413e-bd8c-ae88124631d9" "b0eea0fd-053d-4d3e-9c97-40509f82197b"
+			"bf24344c-f9db-477a-b447-324ef7683e7c" "cacd51ef-1daf-456f-bd0a-112dcbeb14ce"
+			"cec324f1-2520-461d-a5cb-a703ac947e77" "de9e92c0-46be-48ae-b5df-bc998c32a138"
+			"debfeb60-46d9-4a29-a67e-9098cc22b233" "def06bcf-ffbb-49da-8561-057ba3109d21"
+			"df93e154-1dd0-4fce-92e3-0357d6cb5687" "e1382883-b6de-4a41-bc42-a36ee9249f58"
+			"eb3d271c-6b15-4016-a44e-2648b7c99ded" "fd8ee849-bccf-46d6-b022-a91f6b864d04"
 		)
 	)
 	(sheet_instances
