@@ -1,0 +1,81 @@
+(kicad_symbol_lib
+  (version 20231121)
+  (generator kicad_symbol_editor)
+  (symbol "MP1584EN_Buck_Converter"
+    (property "Reference" "U")
+    (property "Value" "MP1584EN_Buck_Converter")
+    (property "Footprint" "MP1584EN_Module:MP1584EN_DIP6")
+    (property "Description" "MP1584EN DC-DC Buck Converter Module, 5-30V input")
+    (property "ki_keywords" "buck converter regulator step-down")
+    (symbol "MP1584EN_Buck_Converter_0_1"
+      (rectangle
+        (start -7.62 10.16)
+        (end 7.62 -10.16)
+        (stroke (width 0.254))
+        (fill (type background))
+      )
+    )
+    (symbol "MP1584EN_Buck_Converter_1_1"
+      (pin power_in line
+        (at -10.16 7.62 0)
+        (length 2.54)
+        (name "VIN"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+        (number "1"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+      )
+      (pin power_out line
+        (at 10.16 7.62 180)
+        (length 2.54)
+        (name "VOUT"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+        (number "2"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+      )
+      (pin power_in line
+        (at -10.16 0 0)
+        (length 2.54)
+        (name "GND"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+        (number "3"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+      )
+      (pin output line
+        (at 10.16 0 180)
+        (length 2.54)
+        (name "EN"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+        (number "4"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+      )
+      (pin input line
+        (at -10.16 -7.62 0)
+        (length 2.54)
+        (name "FB"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+        (number "5"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+      )
+      (pin power_in line
+        (at 10.16 -7.62 180)
+        (length 2.54)
+        (name "GND"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+        (number "6"
+          (effects (font (size 1.27 1.27) (thickness 0.15)))
+        )
+      )
+    )
+  )
+)
