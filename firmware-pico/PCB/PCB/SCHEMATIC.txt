@@ -1,0 +1,234 @@
+================================================================================
+GPS MECHANICAL CLOCK - SCHEMATIC OVERVIEW
+================================================================================
+
+RASPBERRY PI PICO PIN ASSIGNMENTS
+================================================================================
+
+POWER SUPPLY:
+  VBUS        → USB Power Input (5V)
+  5V (Reg)    → 5V Regulated Output from MP1584EN Buck Converter
+  GND         → Ground (multiple pins available)
+
+GPS MODULE (NEO-6M) - UART Serial1:
+  GPIO0 (TX)  → GPS RX (TX from Pico to GPS receiver)
+  GPIO1 (RX)  → GPS TX (RX to Pico from GPS)
+  3.3V        → GPS VCC
+  GND         → GPS GND
+  NOTE: 9600 baud serial connection
+
+TFT DISPLAY (ST7735S) - SPI:
+  GPIO16 (SPI0 RX)    → Display MISO (write-only, can float)
+  GPIO17 (CS)         → Display CS (Chip Select)
+  GPIO18 (SPI0 SCK)   → Display SCL (SPI Clock)
+  GPIO19 (SPI0 MOSI)  → Display SDA (SPI Data)
+  GPIO20 (Data/Cmd)   → Display DC  (Data/Command select)
+  GPIO21 (Reset)      → Display RES (Reset pin)
+  3.3V                → Display VCC
+  GND                 → Display GND
+  3.3V                → Display BLK (Backlight - always on)
+
+STEPPER MOTORS (6x NEMA 11) WITH TMC2208-24V DRIVERS:
+
+  MOTOR 0 - Hours Tens Place:
+    GPIO12  → STEP pin
+    GPIO14  → DIR pin (shared with Motor 1)
+    GPIO13  → HOME sensor input (limit switch)
+
+  MOTOR 1 - Hours Ones Place:
+    GPIO10  → STEP pin
+    GPIO14  → DIR pin (shared with Motor 0)
+    GPIO11  → HOME sensor input
+
+  MOTOR 2 - Minutes Tens Place:
+    GPIO8   → STEP pin
+    GPIO15  → DIR pin (shared with Motor 3)
+    GPIO9   → HOME sensor input
+
+  MOTOR 3 - Minutes Ones Place:
+    GPIO6   → STEP pin
+    GPIO15  → DIR pin (shared with Motor 2)
+    GPIO7   → HOME sensor input
+
+  MOTOR 4 - Seconds Tens Place:
+    GPIO4   → STEP pin
+    GPIO22  → DIR pin (shared with Motor 5)
+    GPIO5   → HOME sensor input
+
+  MOTOR 5 - Seconds Ones Place:
+    GPIO2   → STEP pin
+    GPIO22  → DIR pin (shared with Motor 4)
+    GPIO3   → HOME sensor input
+
+BUTTON INPUTS:
+  GPIO26  → Timezone Button (SPST momentary, pulled HIGH via 10kΩ)
+            Press to increment timezone offset (-12 to +12 hours)
+  GPIO27  → 24H/12H Format Button (SPST momentary, pulled HIGH via 10kΩ)
+            Press to toggle between 24-hour and 12-hour format
+
+LED:
+  GPIO25 (BUILTIN)  → Status LED (flashes when GPS has valid fix)
+
+ENABLE PIN:
+  GPIO22 (shared)   → Motor Enable (active LOW) - disables all stepper drivers
+
+DEBUG PIN:
+  GPIO28  → Debug timing pin for performance measurement
+
+================================================================================
+VOLTAGE REGULATION - MP6524 (or similar 24V-to-5V) BUCK CONVERTER
+================================================================================
+
+INPUT:
+  24V DC (from barrel jack) → +24V
+  GND → Ground
+
+OUTPUT:
+  5V @ 2A → Powers Pico, TFT display, GPS module
+  GND → Ground
+
+FILTERING:
+  220µF electrolytic capacitor on 24V input for stability
+  100µF electrolytic capacitor across 5V output for stability
+  10µF tantalum on GPS supply for clean reference
+
+================================================================================
+POWER DISTRIBUTION
+================================================================================
+
+24V Input Rail:
+  24V → Buck Converter Input
+  24V → Motor Power Supply (to stepper drivers)
+
+5V Rail (from buck converter):
+  5V → Raspberry Pi Pico VBUS
+  5V → TFT Display VCC
+  5V → GPS Module VCC
+  5V → Stepper Driver logic supply rails
+
+3.3V Rail (Pico internal regulator):
+  3.3V → Logic pull-ups, GPIO levels
+
+GND:
+  Continuous GND plane with connections from:
+    - All IC grounds
+    - USB ground
+    - Power input ground
+    - All sensor/switch grounds
+
+================================================================================
+SERIAL COMMUNICATION
+================================================================================
+
+UART0 (Console Debug):
+  TX via USB-Serial on Pico
+  RX via USB-Serial on Pico
+  Baud: 115200
+
+UART1 (GPS):
+  GPIO0 (TX) → GPS RX
+  GPIO1 (RX) → GPS TX
+  Baud: 9600
+  Protocol: NMEA 0183
+
+================================================================================
+BUTTON CIRCUITRY
+================================================================================
+
+Both buttons use identical circuits:
+
+  +3.3V
+    |
+    R (10kΩ)
+    |
+    +------ GPIO (26 or 27)
+    |
+   SW (momentary SPST)
+    |
+   GND
+
+Button presses pull GPIO LOW (active low). Internal pull-ups not used.
+
+================================================================================
+HOME SENSOR INPUTS (Hall Effect Sensors A1104)
+================================================================================
+
+Each motor has an A1104 Hall effect sensor at home position for magnetic detection:
+
+  +3.3V
+    |
+    |
+    +------ A1104 VCC
+
+  A1104 GND ------ GND
+
+  A1104 VOUT ---- 100nF Cap to GND ---- ADC input or comparator ---- GPIO
+
+  Optional Pull-up (if digital input):
+    +3.3V
+      |
+      R (10kΩ)
+      |
+      +------ GPIO (home input)
+
+**A1104 Specifications:**
+- Supply voltage: 4.5V to 24V (use 5V from buck converter)
+- Ratiometric output: 0V to VCC linearly with magnetic field
+- Sensitivity: Can detect moving magnet on motor shaft
+- Response time: ~1µs
+- Operating temperature: −40°C to 150°C
+
+**Configuration Options:**
+1. **Analog Input**: Use Pico's ADC to read voltage (0-3.3V) directly from A1104 VOUT
+2. **Comparator Mode**: Add comparator IC to detect threshold, output to GPIO
+3. **Direct GPIO**: With pull-up resistor, may work with Schmitt trigger input (less recommended)
+
+**Recommended Approach**: Analog input with threshold detection in firmware.
+Home detection triggers when magnet approaches sensor (typically 5-10mm range).
+
+================================================================================
+MOTOR WIRING (TMC2208-24V to NEMA 11)
+================================================================================
+
+Each TMC2208-24V driver connects to a NEMA 11 stepper motor (200 steps/rev, 0.67A, 24V):
+
+Stepper Coil A: Red(+) / Yellow(−) → A / A−
+Stepper Coil B: Blue(+) / Pink(−) → B / B−
+
+Motor power supply: 24V direct
+Driver logic supply: 5V from buck converter
+
+Motors share DIR pins when possible to reduce GPIO usage:
+- Motors 0 & 1 share GPIO14 (rotates in same direction)
+- Motors 2 & 3 share GPIO15 (rotates in same direction)
+- Motors 4 & 5 share GPIO22 (rotates in same direction)
+
+Each motor has unique STEP and HOME pins for independent control.
+
+================================================================================
+RECOMMENDED PCB LAYOUT
+================================================================================
+
+1. Create power planes:
+   - 5V plane for logic
+   - 12V plane for motor power
+   - Ground plane beneath all
+
+2. Component placement:
+   - Pico in center of board
+   - Stepper drivers around Pico edges
+   - Power regulation near connector
+   - Display on edge for external access
+
+3. Signal routing:
+   - Keep motor signals short to drivers
+   - Keep SPI traces grouped and short
+   - Separate analog (GPS) from digital noise
+   - Use 100nF capacitors near each IC power pin
+
+4. Mechanical:
+   - Leave space for motor connectors
+   - Position display connector for external mounting
+   - M3 mounting holes at corners
+
+================================================================================
