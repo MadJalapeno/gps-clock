@@ -1373,6 +1373,227 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "New_Library:IPS_Display"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "IPS_Display_0_1"
+				(rectangle
+					(start -12.7 8.89)
+					(end 12.7 -8.89)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type color)
+						(color 255 249 99 0.5019607843)
+					)
+				)
+			)
+			(symbol "IPS_Display_1_1"
+				(pin power_in line
+					(at -15.24 2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 -6.35 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -6.35 11.43 270)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -3.81 11.43 270)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -1.27 11.43 270)
+					(length 2.54)
+					(name "RES"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 1.27 11.43 270)
+					(length 2.54)
+					(name "DC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 3.81 11.43 270)
+					(length 2.54)
+					(name "CS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 11.43 270)
+					(length 2.54)
+					(name "BLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "New_Library:MP1584EN"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2588,6 +2809,18 @@
 		(uuid "35ce510c-8267-4062-a81e-fb8129b6a33c")
 	)
 	(rectangle
+		(start 81.28 238.76)
+		(end 138.43 276.86)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "534ba6fa-454c-4b72-8c56-d4af2e691792")
+	)
+	(rectangle
 		(start 113.03 134.62)
 		(end 259.08 194.31)
 		(stroke
@@ -2674,6 +2907,16 @@
 			)
 		)
 		(uuid "745bdf16-3157-42ff-9ffb-9e0e466adcf7")
+	)
+	(text "Buck Converter"
+		(exclude_from_sim no)
+		(at 109.728 244.602 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e8a88a01-63a4-44f6-af60-fa279e2a7260")
 	)
 	(text "GPS module"
 		(exclude_from_sim no)
@@ -3397,6 +3640,16 @@
 	)
 	(wire
 		(pts
+			(xy 38.1 167.64) (xy 48.26 167.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7efaebd4-ed2e-4178-9a8f-94ee3fb5940e")
+	)
+	(wire
+		(pts
 			(xy 196.85 58.42) (xy 205.74 58.42)
 		)
 		(stroke
@@ -3544,6 +3797,16 @@
 			(type default)
 		)
 		(uuid "999250f6-fc7e-4711-b88f-00cdfcfd8c44")
+	)
+	(wire
+		(pts
+			(xy 38.1 176.53) (xy 48.26 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c2afdbc-4043-4dd7-a119-3e420efc4ad0")
 	)
 	(wire
 		(pts
@@ -4275,6 +4538,16 @@
 		)
 		(uuid "3edd78b1-e37e-4355-bb14-925f566242a7")
 	)
+	(label "+3.3v"
+		(at 38.1 176.53 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4ea75859-2a7f-4e8f-9c82-e73697a372cf")
+	)
 	(label "SECONDS_ONE_DIR"
 		(at 261.62 160.02 0)
 		(effects
@@ -4314,6 +4587,16 @@
 			(justify left bottom)
 		)
 		(uuid "53c4d5fc-4e09-41fd-b5aa-2e2f6a250a18")
+	)
+	(label "GND"
+		(at 38.1 167.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b8ef6e3-0ffd-4671-ac3f-df92173c677e")
 	)
 	(label "SECONDS_ONE_HOME"
 		(at 384.81 151.13 0)
@@ -6003,6 +6286,105 @@
 			(project "Untitled"
 				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
 					(reference "M4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "New_Library:IPS_Display")
+		(at 63.5 170.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38cc5af0-e476-47ed-91c9-dab55fbe8dd4")
+		(property "Reference" "D1"
+			(at 77.47 170.1799 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 63.5 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Transistor_Power_Module:ST_SDIP-25L"
+			(at 63.5 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 63.5 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "76862ab8-0707-4dfc-a539-80e934c73ddc")
+		)
+		(pin ""
+			(uuid "e379577b-8576-4070-9b28-8439a464966a")
+		)
+		(pin ""
+			(uuid "936ddc7a-3afb-464f-9102-ca403939d693")
+		)
+		(pin ""
+			(uuid "2307c72a-e09e-4ce8-9f63-faf1a1545b9f")
+		)
+		(pin ""
+			(uuid "806935b8-f498-42b8-8eff-9cecefb2b3bc")
+		)
+		(pin ""
+			(uuid "f124e2bd-30be-4441-9c02-0d9e0ef3bdcf")
+		)
+		(pin ""
+			(uuid "668a1288-140c-4a4c-a3c2-2115582b5516")
+		)
+		(pin ""
+			(uuid "cf8e1679-7794-42df-b9f1-9aa0fea909af")
+		)
+		(instances
+			(project "Untitled"
+				(path "/52395102-4107-4a16-b2c4-7b2786d510a6"
+					(reference "D1")
 					(unit 1)
 				)
 			)
