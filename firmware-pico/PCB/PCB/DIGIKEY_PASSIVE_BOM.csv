@@ -1,0 +1,8 @@
+Part Type,Value,Quantity,Specification,DigiKey Search Query,Typical Part Numbers,Notes
+Resistor,10kΩ,8,1/4W 5% metal film through-hole,"10k ohm resistor 0.25W through-hole",CFM14JT10K0 or MFR-25FBF52-10K,"Search: 10000 OHM 1/4W METAL FILM or CFM14JT, typically $0.05-0.10 each"
+Capacitor,100nF,10,50V+ ceramic X7R 5mm pitch,"100nf capacitor 50v 5mm ceramic X7R",K104K50X7RF53H5 or ECE-A1VKS101,"Search: 100NF 50V CERAMIC X7R 5MM, typically $0.08-0.12 each"
+Capacitor,100µF,2,16V+ electrolytic 5.08mm pitch,"100uf 16v electrolytic capacitor",UPL1C101MDD or EEU-FC1C101,"Search: 100UF 16V ELECTROLYTIC 5.08MM, typically $0.15-0.25 each"
+Capacitor,220µF,1,50V electrolytic 10mm pitch,"220uf 50v electrolytic capacitor",EEU-FC1H221 or UPL1H221MDD,"Search: 220UF 50V ELECTROLYTIC RADIAL, typically $0.35-0.50"
+Capacitor,10µF,1,10V+ tantalum small,10uf tantalum capacitor 10v,"TAJB106K010RNJ or CASE-A TANTALUM","Search: 10UF TANTALUM CAPACITOR, typically $0.30-0.50"
+Capacitor,0.1µF,10,50V ceramic for IC bypass,Same as 100nF above,K104K50X7RF53H5,Use same as 100nF capacitors
+Resistor,10kΩ Pull-up,6,1/4W 5% (for Hall sensors),Same as above,CFM14JT10K0,"Included in 10k resistor count (8 total)"
