@@ -5092,6 +5092,16 @@
 		)
 		(uuid "78e95305-36c6-46e7-921c-bf27a02956c6")
 	)
+	(label "TMZ"
+		(at 92.71 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "854dcfa2-9f62-4b6a-9139-def732123143")
+	)
 	(label "GPS - RX"
 		(at 29.21 50.8 0)
 		(effects
@@ -5221,6 +5231,16 @@
 			(justify left bottom)
 		)
 		(uuid "a6c95fb2-9145-413e-bd8c-ae88124631d9")
+	)
+	(label "12{slash}24hr"
+		(at 92.71 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aa1c86fc-e4ae-4885-9538-7b675650a8b0")
 	)
 	(label "HOURS_ONE_HOME"
 		(at 384.81 29.21 0)
